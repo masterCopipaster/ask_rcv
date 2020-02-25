@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ask_rcv
-Tue Feb 18 15:54:52 2020
+Tue Feb 25 15:26:15 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,12 +14,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 11. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 12. lpm_mult Parameter Settings by Entity Instance
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: correlator:prmbl
+ 12. Parameter Settings for User Entity Instance: correlator:syncwrd
+ 13. Parameter Settings for User Entity Instance: syncgen:symbgen
+ 14. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 18 15:54:52 2020           ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 25 15:26:15 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ask_rcv                                         ;
 ; Top-level Entity Name              ; ask_rcv                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 17                                              ;
-;     Total combinational functions  ; 17                                              ;
-;     Dedicated logic registers      ; 16                                              ;
-; Total registers                    ; 16                                              ;
-; Total pins                         ; 33                                              ;
+; Total logic elements               ; 134                                             ;
+;     Total combinational functions  ; 92                                              ;
+;     Dedicated logic registers      ; 62                                              ;
+; Total registers                    ; 62                                              ;
+; Total pins                         ; 37                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 2                                               ;
@@ -183,28 +187,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 17    ;
+; Estimated Total logic elements              ; 134   ;
 ;                                             ;       ;
-; Total combinational functions               ; 17    ;
+; Total combinational functions               ; 92    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 14    ;
-;     -- <=2 input functions                  ; 3     ;
+;     -- 4 input functions                    ; 15    ;
+;     -- 3 input functions                    ; 43    ;
+;     -- <=2 input functions                  ; 34    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 3     ;
-;     -- arithmetic mode                      ; 14    ;
+;     -- normal mode                          ; 45    ;
+;     -- arithmetic mode                      ; 47    ;
 ;                                             ;       ;
-; Total registers                             ; 16    ;
-;     -- Dedicated logic registers            ; 16    ;
+; Total registers                             ; 62    ;
+;     -- Dedicated logic registers            ; 62    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 33    ;
+; I/O pins                                    ; 37    ;
 ; Embedded Multiplier 9-bit elements          ; 2     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 16    ;
-; Total fan-out                               ; 112   ;
-; Average fan-out                             ; 1.60  ;
+; Maximum fan-out                             ; 51    ;
+; Total fan-out                               ; 401   ;
+; Average fan-out                             ; 2.06  ;
 +---------------------------------------------+-------+
 
 
@@ -213,11 +217,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
-; |ask_rcv                        ; 17 (17)           ; 16 (16)      ; 0           ; 2            ; 2       ; 0         ; 33   ; 0            ; |ask_rcv                                        ; work         ;
+; |ask_rcv                        ; 92 (18)           ; 62 (18)      ; 0           ; 2            ; 2       ; 0         ; 37   ; 0            ; |ask_rcv                                        ; work         ;
+;    |correlator:prmbl|           ; 69 (69)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|correlator:prmbl                       ; work         ;
+;    |correlator:syncwrd|         ; 3 (3)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|correlator:syncwrd                     ; work         ;
 ;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult0                         ; work         ;
 ;       |mult_o5t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated ; work         ;
 ;    |lpm_mult:Mult1|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult1                         ; work         ;
 ;       |mult_o5t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated ; work         ;
+;    |syncgen:symbgen|            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|syncgen:symbgen                        ; work         ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -240,19 +247,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; syncgen:symbgen|counter[1]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
+; Total registers                              ; 62    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: correlator:prmbl       ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; WIDTH          ; 32                               ; Signed Integer  ;
+; TEMPLATE       ; 11110000111100001111000011110000 ; Unsigned Binary ;
+; BORDER         ; 31                               ; Signed Integer  ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: correlator:syncwrd ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; WIDTH          ; 8        ; Signed Integer                      ;
+; TEMPLATE       ; 10100111 ; Unsigned Binary                     ;
+; BORDER         ; 7        ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: syncgen:symbgen ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; PRESCALER      ; 2     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------+
@@ -371,14 +422,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 18 15:54:50 2020
+    Info: Processing started: Tue Feb 25 15:26:14 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ask_rcv -c ask_rcv
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 2 entities, in source file ask_rcv.v
+Info (12021): Found 4 design units, including 4 entities, in source file ask_rcv.v
     Info (12023): Found entity 1: ask_rcv
     Info (12023): Found entity 2: serial_rcv
+    Info (12023): Found entity 3: correlator
+    Info (12023): Found entity 4: syncgen
 Info (12127): Elaborating entity "ask_rcv" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ask_rcv.v(18): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at ask_rcv.v(38): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "correlator" for hierarchy "correlator:prmbl"
+Warning (10235): Verilog HDL Always Construct warning at ask_rcv.v(89): variable "corres" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10030): Net "in[30..0]" at ask_rcv.v(69) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "correlator" for hierarchy "correlator:syncwrd"
+Warning (10235): Verilog HDL Always Construct warning at ask_rcv.v(89): variable "corres" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10030): Net "in[6..0]" at ask_rcv.v(69) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "syncgen" for hierarchy "syncgen:symbgen"
+Warning (10230): Verilog HDL assignment warning at ask_rcv.v(109): truncated value with size 32 to match size of target (2)
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
@@ -397,15 +458,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mult
     Info (12023): Found entity 1: mult_o5t
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 17 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 17 logic cells
+Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 134 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Tue Feb 18 15:54:52 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Feb 25 15:26:15 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

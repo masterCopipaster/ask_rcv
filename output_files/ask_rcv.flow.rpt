@@ -1,5 +1,5 @@
 Flow report for ask_rcv
-Tue Feb 18 15:54:58 2020
+Tue Feb 25 15:26:22 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Feb 18 15:54:58 2020           ;
+; Flow Status                        ; Successful - Tue Feb 25 15:26:22 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ask_rcv                                         ;
 ; Top-level Entity Name              ; ask_rcv                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C6                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 17 / 4,608 ( < 1 % )                            ;
-;     Total combinational functions  ; 17 / 4,608 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 16 / 4,608 ( < 1 % )                            ;
-; Total registers                    ; 16                                              ;
-; Total pins                         ; 33 / 89 ( 37 % )                                ;
+; Total logic elements               ; 125 / 4,608 ( 3 % )                             ;
+;     Total combinational functions  ; 94 / 4,608 ( 2 % )                              ;
+;     Dedicated logic registers      ; 62 / 4,608 ( 1 % )                              ;
+; Total registers                    ; 62                                              ;
+; Total pins                         ; 37 / 89 ( 42 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 2 / 26 ( 8 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/18/2020 15:54:51 ;
+; Start date & time ; 02/25/2020 15:26:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ask_rcv             ;
 +-------------------+---------------------+
@@ -75,14 +75,14 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id           ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID               ; 18016935468448.158203049117564 ; --            ; --          ; --                   ;
+; COMPILER_SIGNATURE_ID               ; 18016935468448.158263357417308 ; --            ; --          ; --                   ;
 ; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL     ; Design Compiler                ; <None>        ; --          ; --                   ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                             ; --            ; --          ; eda_simulation       ;
 ; EDA_INPUT_DATA_FORMAT               ; Verilog Hdl                    ; --            ; --          ; eda_design_synthesis ;
 ; EDA_INPUT_VCC_NAME                  ; Vdd                            ; --            ; --          ; eda_design_synthesis ;
 ; EDA_LMF_FILE                        ; altsyn.lmf                     ; --            ; --          ; eda_design_synthesis ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation       ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --                   ;
+; EDA_SIMULATION_TOOL                 ; Riviera-PRO (Verilog)          ; <None>        ; --          ; --                   ;
 ; EDA_TIME_SCALE                      ; 1 ps                           ; --            ; --          ; eda_simulation       ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --                   ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --                   ;
@@ -98,12 +98,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:02     ; 1.0                     ; 4802 MB             ; 00:00:02                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4545 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4538 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 4806 MB             ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4543 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4509 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

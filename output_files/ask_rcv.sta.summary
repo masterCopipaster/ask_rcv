@@ -2,12 +2,84 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'clk'
+Slack : -6.146
+TNS   : -8.394
+
+Type  : Slow Model Setup 'syncgen:symbgen|syncclk'
+Slack : -0.534
+TNS   : -0.534
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.202
+TNS   : -2.202
+
+Type  : Slow Model Hold 'syncgen:symbgen|syncclk'
+Slack : 0.524
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk'
+Slack : 1.825
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clk'
+Slack : -1.555
+TNS   : -3.110
+
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -17.380
+TNS   : -52.380
+
+Type  : Slow Model Minimum Pulse Width 'syncgen:symbgen|syncclk'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Slow Model Minimum Pulse Width 'correlator:prmbl|decision'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Slow Model Minimum Pulse Width 'correlator:syncwrd|decision'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -1.959
+TNS   : -1.959
+
+Type  : Fast Model Setup 'syncgen:symbgen|syncclk'
+Slack : 0.266
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.341
+TNS   : -1.341
+
+Type  : Fast Model Hold 'syncgen:symbgen|syncclk'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk'
+Slack : 1.348
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk'
+Slack : -0.968
+TNS   : -1.936
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -17.380
+TNS   : -52.380
+
+Type  : Fast Model Minimum Pulse Width 'syncgen:symbgen|syncclk'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Fast Model Minimum Pulse Width 'correlator:prmbl|decision'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'correlator:syncwrd|decision'
+Slack : -0.500
+TNS   : -1.000
 
 ------------------------------------------------------------

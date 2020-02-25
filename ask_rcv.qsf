@@ -52,7 +52,7 @@ set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Design Compiler"
 set_global_assignment -name EDA_INPUT_VCC_NAME VDD -section_id eda_design_synthesis
 set_global_assignment -name EDA_LMF_FILE altsyn.lmf -section_id eda_design_synthesis
 set_global_assignment -name EDA_INPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_design_synthesis
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_SIMULATION_TOOL "Riviera-PRO (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE ask_rcv.v
@@ -60,8 +60,8 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE test1.vwf
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name SIMULATION_MODE TIMING
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf"

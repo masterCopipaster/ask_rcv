@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ask_rcv
-Tue Feb 18 15:54:58 2020
+Tue Feb 25 15:26:22 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Feb 18 15:54:58 2020 ;
+; EDA Netlist Writer Status ; Successful - Tue Feb 25 15:26:22 2020 ;
 ; Revision Name             ; ask_rcv                               ;
 ; Top-level Entity Name     ; ask_rcv                               ;
 ; Family                    ; Cyclone II                            ;
@@ -44,34 +44,34 @@ applicable agreement for further details.
 +---------------------------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                           ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Option                                                                                            ; Setting                   ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; On                        ;
-; Truncate long hierarchy paths                                                                     ; Off                       ;
-; Map illegal HDL characters                                                                        ; Off                       ;
-; Flatten buses into individual nodes                                                               ; Off                       ;
-; Maintain hierarchy                                                                                ; Off                       ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
-; Enable glitch filtering                                                                           ; Off                       ;
-; Do not write top level VHDL entity                                                                ; Off                       ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
-; Architecture name in VHDL output netlist                                                          ; structure                 ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                       ;
++---------------------------------------------------------------------------------------------------+-----------------------+
+; Option                                                                                            ; Setting               ;
++---------------------------------------------------------------------------------------------------+-----------------------+
+; Tool Name                                                                                         ; Riviera-PRO (Verilog) ;
+; Generate netlist for functional simulation only                                                   ; On                    ;
+; Truncate long hierarchy paths                                                                     ; Off                   ;
+; Map illegal HDL characters                                                                        ; Off                   ;
+; Flatten buses into individual nodes                                                               ; Off                   ;
+; Maintain hierarchy                                                                                ; Off                   ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                   ;
+; Enable glitch filtering                                                                           ; Off                   ;
+; Do not write top level VHDL entity                                                                ; Off                   ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                   ;
+; Architecture name in VHDL output netlist                                                          ; structure             ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                   ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                   ;
++---------------------------------------------------------------------------------------------------+-----------------------+
 
 
-+----------------------------------------------------------------------+
-; Simulation Generated Files                                           ;
-+----------------------------------------------------------------------+
-; Generated Files                                                      ;
-+----------------------------------------------------------------------+
-; C:/Users/petrenko.a/Documents/ask_rcv/simulation/modelsim/ask_rcv.vo ;
-+----------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Simulation Generated Files                                             ;
++------------------------------------------------------------------------+
+; Generated Files                                                        ;
++------------------------------------------------------------------------+
+; C:/Users/petrenko.a/Documents/ask_rcv/simulation/rivierapro/ask_rcv.vo ;
++------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 18 15:54:58 2020
+    Info: Processing started: Tue Feb 25 15:26:21 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ask_rcv -c ask_rcv
-Info (204019): Generated file ask_rcv.vo in folder "C:/Users/petrenko.a/Documents/ask_rcv/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ask_rcv.vo in folder "C:/Users/petrenko.a/Documents/ask_rcv/simulation/rivierapro/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4527 megabytes
-    Info: Processing ended: Tue Feb 18 15:54:58 2020
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4521 megabytes
+    Info: Processing ended: Tue Feb 25 15:26:22 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

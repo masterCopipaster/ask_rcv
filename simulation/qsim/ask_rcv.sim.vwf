@@ -25,8 +25,8 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 1000.0;
-	SIMULATION_TIME = 1000.0;
+	DATA_DURATION = 10000.0;
+	SIMULATION_TIME = 10000.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
@@ -392,12 +392,482 @@ SIGNAL("odata[8]")
 	PARENT = "odata";
 }
 
+SIGNAL("serialin")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("correlator:prmbl|shreg")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 32;
+	LSB_INDEX = 0;
+	DIRECTION = BURIED;
+	PARENT = "";
+}
+
+SIGNAL("correlator:prmbl|shreg[31]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[30]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[29]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[28]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[27]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[26]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[25]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[24]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[23]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[22]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[21]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[20]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[19]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[18]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[17]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[16]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[15]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[14]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[13]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[12]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[11]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:prmbl|shreg[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:prmbl|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("correlator:syncwrd|shreg[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:syncwrd|shreg[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "correlator:syncwrd|shreg";
+}
+
+SIGNAL("correlator:prmbl|decision")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("preamble_lock")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("syncwrd_lock")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("enabled_symbclk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("idata[7]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 
@@ -407,7 +877,8 @@ TRANSITION_LIST("idata[6]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 640.0;
-		LEVEL 1 FOR 360.0;
+		LEVEL 1 FOR 359.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -423,7 +894,8 @@ TRANSITION_LIST("idata[5]")
 			LEVEL 1 FOR 320.0;
 		}
 		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 1 FOR 39.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -438,7 +910,7 @@ TRANSITION_LIST("idata[4]")
 			LEVEL 0 FOR 160.0;
 			LEVEL 1 FOR 160.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 9040.0;
 	}
 }
 
@@ -453,7 +925,7 @@ TRANSITION_LIST("idata[3]")
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 9040.0;
 	}
 }
 
@@ -468,7 +940,7 @@ TRANSITION_LIST("idata[2]")
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 9040.0;
 	}
 }
 
@@ -479,10 +951,13 @@ TRANSITION_LIST("idata[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 25;
+			REPEAT = 24;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 19.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -493,10 +968,13 @@ TRANSITION_LIST("idata[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
+			REPEAT = 49;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 9.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -505,7 +983,7 @@ TRANSITION_LIST("qdata[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 
@@ -515,7 +993,8 @@ TRANSITION_LIST("qdata[6]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 640.0;
-		LEVEL 1 FOR 360.0;
+		LEVEL 1 FOR 359.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -531,7 +1010,8 @@ TRANSITION_LIST("qdata[5]")
 			LEVEL 1 FOR 320.0;
 		}
 		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 1 FOR 39.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -546,7 +1026,7 @@ TRANSITION_LIST("qdata[4]")
 			LEVEL 0 FOR 160.0;
 			LEVEL 1 FOR 160.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 9040.0;
 	}
 }
 
@@ -561,7 +1041,7 @@ TRANSITION_LIST("qdata[3]")
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 9040.0;
 	}
 }
 
@@ -576,7 +1056,7 @@ TRANSITION_LIST("qdata[2]")
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 9040.0;
 	}
 }
 
@@ -587,10 +1067,13 @@ TRANSITION_LIST("qdata[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 25;
+			REPEAT = 24;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 19.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -601,10 +1084,13 @@ TRANSITION_LIST("qdata[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
+			REPEAT = 49;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 9.0;
+		LEVEL 0 FOR 9001.0;
 	}
 }
 
@@ -613,56 +1099,41 @@ TRANSITION_LIST("odata[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 85.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 101.967;
+		LEVEL 1 FOR 30.0;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 3;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		NODE
-		{
-			REPEAT = 6;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 1 FOR 30.0;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 3;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 30.0;
 		NODE
 		{
-			REPEAT = 4;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 3;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
 		}
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 5.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 99.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 8979.033;
 	}
 }
 
@@ -671,39 +1142,19 @@ TRANSITION_LIST("odata[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 65.0;
+		LEVEL 0 FOR 71.653;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 5;
 			LEVEL 1 FOR 20.0;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
-			NODE
-			{
-				REPEAT = 4;
-				LEVEL 0 FOR 10.0;
-				LEVEL 1 FOR 10.0;
-			}
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 110.0;
+			LEVEL 0 FOR 100.0;
 		}
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		NODE
-		{
-			REPEAT = 4;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 85.0;
+		LEVEL 0 FOR 9068.347;
 	}
 }
 
@@ -712,41 +1163,19 @@ TRANSITION_LIST("odata[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 45.0;
+		LEVEL 0 FOR 51.394;
 		NODE
 		{
-			REPEAT = 4;
+			REPEAT = 11;
 			LEVEL 1 FOR 20.0;
-			NODE
-			{
-				REPEAT = 2;
-				LEVEL 0 FOR 10.0;
-				LEVEL 1 FOR 10.0;
-			}
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 70.0;
-		}
-		LEVEL 1 FOR 20.0;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 10.0;
+			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 30.0;
 		}
-		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 70.0;
-		LEVEL 1 FOR 20.0;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 65.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 9018.606;
 	}
 }
 
@@ -755,16 +1184,15 @@ TRANSITION_LIST("odata[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
+		LEVEL 0 FOR 91.786;
 		NODE
 		{
-			REPEAT = 12;
+			REPEAT = 11;
 			LEVEL 1 FOR 10.0;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-			LEVEL 0 FOR 50.0;
+			LEVEL 0 FOR 70.0;
 		}
-		LEVEL 1 FOR 5.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 9018.214;
 	}
 }
 
@@ -773,15 +1201,15 @@ TRANSITION_LIST("odata[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 25.0;
+		LEVEL 0 FOR 31.402;
 		NODE
 		{
 			REPEAT = 24;
-			LEVEL 1 FOR 10.0;
-			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
 		}
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 29.0;
+		LEVEL 0 FOR 8979.598;
 	}
 }
 
@@ -790,7 +1218,7 @@ TRANSITION_LIST("odata[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 
@@ -799,14 +1227,15 @@ TRANSITION_LIST("odata[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 15.0;
+		LEVEL 0 FOR 21.039;
 		NODE
 		{
 			REPEAT = 49;
 			LEVEL 1 FOR 10.0;
 			LEVEL 0 FOR 10.0;
 		}
-		LEVEL 1 FOR 5.0;
+		LEVEL 1 FOR 9.0;
+		LEVEL 0 FOR 8989.961;
 	}
 }
 
@@ -815,7 +1244,7 @@ TRANSITION_LIST("odata[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 
@@ -824,12 +1253,23 @@ TRANSITION_LIST("clk")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 5.0;
 		NODE
 		{
-			REPEAT = 100;
+			REPEAT = 98;
 			LEVEL 0 FOR 5.0;
 			LEVEL 1 FOR 5.0;
 		}
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 4.0;
+		NODE
+		{
+			REPEAT = 900;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -838,7 +1278,7 @@ TRANSITION_LIST("odata[15]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 
@@ -847,8 +1287,11 @@ TRANSITION_LIST("odata[14]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 915.0;
-		LEVEL 1 FOR 85.0;
+		LEVEL 0 FOR 651.332;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 270.0;
+		LEVEL 1 FOR 79.0;
+		LEVEL 0 FOR 8989.668;
 	}
 }
 
@@ -857,9 +1300,11 @@ TRANSITION_LIST("odata[13]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 645.0;
+		LEVEL 0 FOR 661.678;
 		LEVEL 1 FOR 270.0;
-		LEVEL 0 FOR 85.0;
+		LEVEL 0 FOR 79.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 8979.322;
 	}
 }
 
@@ -868,11 +1313,13 @@ TRANSITION_LIST("odata[12]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 465.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 85.0;
+		LEVEL 0 FOR 471.907;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 170.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 9068.093;
 	}
 }
 
@@ -881,16 +1328,23 @@ TRANSITION_LIST("odata[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 325.0;
-		LEVEL 1 FOR 140.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 341.334;
+		LEVEL 1 FOR 130.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
 		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 35.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 39.0;
+		LEVEL 0 FOR 8979.666;
 	}
 }
 
@@ -899,28 +1353,29 @@ TRANSITION_LIST("odata[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 235.0;
-		LEVEL 1 FOR 90.0;
+		LEVEL 0 FOR 261.86;
+		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 50.0;
 		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 10.0;
 		NODE
 		{
 			REPEAT = 2;
-			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
-		}
-		LEVEL 0 FOR 40.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 1 FOR 30.0;
-			LEVEL 0 FOR 30.0;
+			LEVEL 0 FOR 20.0;
 		}
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 5.0;
+		LEVEL 0 FOR 9028.14;
 	}
 }
 
@@ -929,43 +1384,47 @@ TRANSITION_LIST("odata[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 165.0;
-		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 30.0;
-		NODE
-		{
-			REPEAT = 5;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 20.0;
-		}
+		LEVEL 0 FOR 181.679;
+		LEVEL 1 FOR 80.0;
 		NODE
 		{
 			REPEAT = 2;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 10.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 50.0;
 		}
+		LEVEL 0 FOR 30.0;
 		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
 		NODE
 		{
 			REPEAT = 3;
+			LEVEL 1 FOR 20.0;
 			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 10.0;
 		}
-		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 5.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 19.0;
+		LEVEL 0 FOR 8989.321;
 	}
 }
 
@@ -974,53 +1433,838 @@ TRANSITION_LIST("odata[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 125.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 131.646;
+		LEVEL 1 FOR 50.0;
 		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 10.0;
 		NODE
 		{
-			REPEAT = 3;
+			REPEAT = 4;
 			LEVEL 1 FOR 20.0;
 			LEVEL 0 FOR 20.0;
 		}
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 10.0;
-		}
-		LEVEL 1 FOR 10.0;
+		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		NODE
-		{
-			REPEAT = 10;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
+		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 10.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 110.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 10.0;
 		NODE
 		{
 			REPEAT = 2;
-			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
 		}
-		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 29.0;
+		LEVEL 0 FOR 8979.354;
+	}
+}
+
+TRANSITION_LIST("serialin")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9300.0;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[31]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 67.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9292.401;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[30]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 77.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9282.401;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[29]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 87.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9272.401;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[28]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 97.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9262.401;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[27]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 107.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9252.401;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[26]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 117.594;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9242.406;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[25]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 127.594;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9232.406;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[24]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 137.594;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9222.406;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[23]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 147.594;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9212.406;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[22]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 157.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9202.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[21]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 167.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9192.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[20]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 177.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9182.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[19]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 187.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9172.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[18]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 197.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9162.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[17]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 207.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9152.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[16]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 217.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9142.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[15]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 227.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9132.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[14]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 237.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9122.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[13]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 247.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9112.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[12]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 257.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9102.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[11]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 267.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9092.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 277.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9082.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 287.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9072.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 297.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9062.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 307.589;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9052.411;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 317.592;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9042.408;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 327.592;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9032.408;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 337.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9022.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 347.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9012.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 357.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 9002.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 367.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 39.0;
+		LEVEL 0 FOR 8993.41;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|shreg[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 377.59;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 39.0;
+		LEVEL 0 FOR 8983.41;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:syncwrd|shreg[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("correlator:prmbl|decision")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("preamble_lock")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("syncwrd_lock")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("enabled_symbclk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 
@@ -1381,6 +2625,471 @@ DISPLAY_LINE
 	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
 	PARENT = 19;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "serialin";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 36;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 37;
+	TREE_LEVEL = 0;
+	CHILDREN = 38, 39, 40, 41, 42, 43, 44, 45;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 38;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 39;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 40;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 42;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 43;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 44;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:syncwrd|shreg[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 45;
+	TREE_LEVEL = 1;
+	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 46;
+	TREE_LEVEL = 0;
+	CHILDREN = 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[31]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 47;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[30]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 48;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[29]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 49;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[28]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 50;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[27]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 51;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[26]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 52;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[25]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 53;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[24]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 54;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[23]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 55;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[22]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 56;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[21]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 57;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[20]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 58;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[19]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 59;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[18]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 60;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[17]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 61;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[16]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 62;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[15]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 63;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[14]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 64;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[13]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 65;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[12]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 66;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[11]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 67;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 68;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 69;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 70;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 71;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 72;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 73;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 74;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 75;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 76;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 77;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|shreg[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 78;
+	TREE_LEVEL = 1;
+	PARENT = 46;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "correlator:prmbl|decision";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 79;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "preamble_lock";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 80;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "syncwrd_lock";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 81;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "enabled_symbclk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 82;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

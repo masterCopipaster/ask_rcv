@@ -114,60 +114,60 @@ GND*                         : 47        :        :                   :         
 GND*                         : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-GND*                         : 51        :        :                   :         : 4         :                
+odata[12]                    : 51        : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : 52        :        :                   :         : 4         :                
-GND*                         : 53        :        :                   :         : 4         :                
+odata[9]                     : 53        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
-GND*                         : 55        :        :                   :         : 4         :                
+odata[6]                     : 55        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 56        : gnd    :                   :         :           :                
-GND*                         : 57        :        :                   :         : 4         :                
-odata[7]                     : 58        : output : 3.3-V LVTTL       :         : 4         : N              
-qdata[6]                     : 59        : input  : 3.3-V LVTTL       :         : 4         : N              
-idata[5]                     : 60        : input  : 3.3-V LVTTL       :         : 4         : N              
+odata[13]                    : 57        : output : 3.3-V LVTTL       :         : 4         : N              
+odata[2]                     : 58        : output : 3.3-V LVTTL       :         : 4         : N              
+odata[14]                    : 59        : output : 3.3-V LVTTL       :         : 4         : N              
+odata[11]                    : 60        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
-odata[10]                    : 63        : output : 3.3-V LVTTL       :         : 4         : N              
-odata[9]                     : 64        : output : 3.3-V LVTTL       :         : 4         : N              
-odata[14]                    : 65        : output : 3.3-V LVTTL       :         : 4         : N              
+idata[4]                     : 63        : input  : 3.3-V LVTTL       :         : 4         : N              
+qdata[3]                     : 64        : input  : 3.3-V LVTTL       :         : 4         : N              
+odata[4]                     : 65        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
-GND*                         : 67        :        :                   :         : 4         :                
+qdata[1]                     : 67        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 68        : gnd    :                   :         :           :                
 GND*                         : 69        :        :                   :         : 4         :                
 GND*                         : 70        :        :                   :         : 4         :                
-GND*                         : 71        :        :                   :         : 4         :                
-qdata[3]                     : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
+idata[6]                     : 71        : input  : 3.3-V LVTTL       :         : 4         : N              
+qdata[2]                     : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : 73        :        :                   :         : 3         :                
 GND*                         : 74        :        :                   :         : 3         :                
-GND*                         : 75        :        :                   :         : 3         :                
+qdata[5]                     : 75        : input  : 3.3-V LVTTL       :         : 3         : N              
 ~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
 GND                          : 78        : gnd    :                   :         :           :                
-odata[2]                     : 79        : output : 3.3-V LVTTL       :         : 3         : N              
-odata[8]                     : 80        : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 81        :        :                   :         : 3         :                
+odata[1]                     : 79        : output : 3.3-V LVTTL       :         : 3         : N              
+enabled_symbclk              : 80        : output : 3.3-V LVTTL       :         : 3         : N              
+odata[0]                     : 81        : output : 3.3-V LVTTL       :         : 3         : N              
 nSTATUS                      : 82        :        :                   :         : 3         :                
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
 MSEL0                        : 85        :        :                   :         : 3         :                
-GND*                         : 86        :        :                   :         : 3         :                
-GND*                         : 87        :        :                   :         : 3         :                
-GND+                         : 88        :        :                   :         : 3         :                
-GND+                         : 89        :        :                   :         : 3         :                
-GND+                         : 90        :        :                   :         : 3         :                
-GND+                         : 91        :        :                   :         : 3         :                
-odata[13]                    : 92        : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 93        :        :                   :         : 3         :                
-idata[2]                     : 94        : input  : 3.3-V LVTTL       :         : 3         : N              
+idata[0]                     : 86        : input  : 3.3-V LVTTL       :         : 3         : N              
+qdata[0]                     : 87        : input  : 3.3-V LVTTL       :         : 3         : N              
+qdata[6]                     : 88        : input  : 3.3-V LVTTL       :         : 3         : N              
+qdata[7]                     : 89        : input  : 3.3-V LVTTL       :         : 3         : N              
+idata[1]                     : 90        : input  : 3.3-V LVTTL       :         : 3         : N              
+idata[2]                     : 91        : input  : 3.3-V LVTTL       :         : 3         : N              
+syncwrd_lock                 : 92        : output : 3.3-V LVTTL       :         : 3         : N              
+serialin                     : 93        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 94        :        :                   :         : 3         :                
 VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
-odata[3]                     : 96        : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 97        :        :                   :         : 3         :                
+GND*                         : 96        :        :                   :         : 3         :                
+preamble_lock                : 97        : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 98        : gnd    :                   :         :           :                
-odata[5]                     : 99        : output : 3.3-V LVTTL       :         : 3         : N              
-qdata[5]                     : 100       : input  : 3.3-V LVTTL       :         : 3         : N              
-idata[0]                     : 101       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 99        :        :                   :         : 3         :                
+GND*                         : 100       :        :                   :         : 3         :                
+GND*                         : 101       :        :                   :         : 3         :                
 VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
-odata[15]                    : 103       : output : 3.3-V LVTTL       :         : 3         : N              
-odata[6]                     : 104       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 103       :        :                   :         : 3         :                
+GND*                         : 104       :        :                   :         : 3         :                
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
@@ -176,30 +176,30 @@ VCCA_PLL2                    : 109       : power  :                   : 1.2V    
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
 GND*                         : 112       :        :                   :         : 2         :                
-odata[0]                     : 113       : output : 3.3-V LVTTL       :         : 2         : N              
-odata[1]                     : 114       : output : 3.3-V LVTTL       :         : 2         : N              
-idata[7]                     : 115       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 113       :        :                   :         : 2         :                
+GND*                         : 114       :        :                   :         : 2         :                
+GND*                         : 115       :        :                   :         : 2         :                
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-odata[4]                     : 118       : output : 3.3-V LVTTL       :         : 2         : N              
-qdata[0]                     : 119       : input  : 3.3-V LVTTL       :         : 2         : N              
-qdata[1]                     : 120       : input  : 3.3-V LVTTL       :         : 2         : N              
-qdata[4]                     : 121       : input  : 3.3-V LVTTL       :         : 2         : N              
-odata[12]                    : 122       : output : 3.3-V LVTTL       :         : 2         : N              
+odata[15]                    : 118       : output : 3.3-V LVTTL       :         : 2         : N              
+idata[7]                     : 119       : input  : 3.3-V LVTTL       :         : 2         : N              
+qdata[4]                     : 120       : input  : 3.3-V LVTTL       :         : 2         : N              
+idata[3]                     : 121       : input  : 3.3-V LVTTL       :         : 2         : N              
+odata[10]                    : 122       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
-idata[4]                     : 125       : input  : 3.3-V LVTTL       :         : 2         : N              
-odata[11]                    : 126       : output : 3.3-V LVTTL       :         : 2         : N              
+odata[5]                     : 125       : output : 3.3-V LVTTL       :         : 2         : N              
+odata[3]                     : 126       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-idata[3]                     : 129       : input  : 3.3-V LVTTL       :         : 2         : N              
+odata[8]                     : 129       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-idata[6]                     : 132       : input  : 3.3-V LVTTL       :         : 2         : N              
-qdata[2]                     : 133       : input  : 3.3-V LVTTL       :         : 2         : N              
-qdata[7]                     : 134       : input  : 3.3-V LVTTL       :         : 2         : N              
+idata[5]                     : 132       : input  : 3.3-V LVTTL       :         : 2         : N              
+odata[7]                     : 133       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 134       :        :                   :         : 2         :                
 GND*                         : 135       :        :                   :         : 2         :                
-idata[1]                     : 136       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 136       :        :                   :         : 2         :                
 GND*                         : 137       :        :                   :         : 2         :                
 VCCIO2                       : 138       : power  :                   : 3.3V    : 2         :                
 GND*                         : 139       :        :                   :         : 2         :                

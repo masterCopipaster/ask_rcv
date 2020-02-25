@@ -1,5 +1,5 @@
 Simulator report for ask_rcv
-Tue Feb 18 14:20:22 2020
+Tue Feb 25 16:32:20 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,12 +44,13 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 126 nodes    ;
-; Simulation Coverage         ;      76.34 % ;
-; Total Number of Transitions ; 6402         ;
+; Simulation End Time         ; 10.0 us      ;
+; Simulation Netlist Size     ; 218 nodes    ;
+; Simulation Coverage         ;      82.45 % ;
+; Total Number of Transitions ; 22794        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5T144C6  ;
 +-----------------------------+--------------+
 
 
@@ -58,7 +59,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
 ; Option                                                                                     ; Setting                                         ; Default Value ;
 +--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                                      ; Timing        ;
+; Simulation mode                                                                            ; Timing                                          ; Timing        ;
 ; Start time                                                                                 ; 0 ns                                            ; 0 ns          ;
 ; Simulation results format                                                                  ; VWF                                             ;               ;
 ; Vector input source                                                                        ; C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf ;               ;
@@ -94,260 +95,416 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      76.34 % ;
-; Total nodes checked                                 ; 126          ;
-; Total output ports checked                          ; 186          ;
-; Total output ports with complete 1/0-value coverage ; 142          ;
-; Total output ports with no 1/0-value coverage       ; 33           ;
-; Total output ports with no 1-value coverage         ; 33           ;
-; Total output ports with no 0-value coverage         ; 44           ;
+; Total coverage as a percentage                      ;      82.45 % ;
+; Total nodes checked                                 ; 218          ;
+; Total output ports checked                          ; 319          ;
+; Total output ports with complete 1/0-value coverage ; 263          ;
+; Total output ports with no 1/0-value coverage       ; 56           ;
+; Total output ports with no 1-value coverage         ; 56           ;
+; Total output ports with no 0-value coverage         ; 56           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                                                              ;
-+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                    ; Output Port Name                                                                       ; Output Port Type ;
-+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+
-; |ask_rcv|odatareg[1]                                                         ; |ask_rcv|odatareg[1]                                                                   ; regout           ;
-; |ask_rcv|odatareg[3]                                                         ; |ask_rcv|odatareg[3]                                                                   ; regout           ;
-; |ask_rcv|odatareg[4]                                                         ; |ask_rcv|odatareg[4]                                                                   ; regout           ;
-; |ask_rcv|odatareg[5]                                                         ; |ask_rcv|odatareg[5]                                                                   ; regout           ;
-; |ask_rcv|odatareg[6]                                                         ; |ask_rcv|odatareg[6]                                                                   ; regout           ;
-; |ask_rcv|odatareg[7]                                                         ; |ask_rcv|odatareg[7]                                                                   ; regout           ;
-; |ask_rcv|odatareg[8]                                                         ; |ask_rcv|odatareg[8]                                                                   ; regout           ;
-; |ask_rcv|odatareg[9]                                                         ; |ask_rcv|odatareg[9]                                                                   ; regout           ;
-; |ask_rcv|odatareg[10]                                                        ; |ask_rcv|odatareg[10]                                                                  ; regout           ;
-; |ask_rcv|odatareg[11]                                                        ; |ask_rcv|odatareg[11]                                                                  ; regout           ;
-; |ask_rcv|odatareg[12]                                                        ; |ask_rcv|odatareg[12]                                                                  ; regout           ;
-; |ask_rcv|odatareg[13]                                                        ; |ask_rcv|odatareg[13]                                                                  ; regout           ;
-; |ask_rcv|clk                                                                 ; |ask_rcv|clk                                                                           ; out              ;
-; |ask_rcv|idata[0]                                                            ; |ask_rcv|idata[0]                                                                      ; out              ;
-; |ask_rcv|idata[1]                                                            ; |ask_rcv|idata[1]                                                                      ; out              ;
-; |ask_rcv|idata[2]                                                            ; |ask_rcv|idata[2]                                                                      ; out              ;
-; |ask_rcv|idata[3]                                                            ; |ask_rcv|idata[3]                                                                      ; out              ;
-; |ask_rcv|idata[4]                                                            ; |ask_rcv|idata[4]                                                                      ; out              ;
-; |ask_rcv|idata[5]                                                            ; |ask_rcv|idata[5]                                                                      ; out              ;
-; |ask_rcv|qdata[0]                                                            ; |ask_rcv|qdata[0]                                                                      ; out              ;
-; |ask_rcv|qdata[1]                                                            ; |ask_rcv|qdata[1]                                                                      ; out              ;
-; |ask_rcv|qdata[2]                                                            ; |ask_rcv|qdata[2]                                                                      ; out              ;
-; |ask_rcv|qdata[3]                                                            ; |ask_rcv|qdata[3]                                                                      ; out              ;
-; |ask_rcv|qdata[4]                                                            ; |ask_rcv|qdata[4]                                                                      ; out              ;
-; |ask_rcv|qdata[5]                                                            ; |ask_rcv|qdata[5]                                                                      ; out              ;
-; |ask_rcv|odata[1]                                                            ; |ask_rcv|odata[1]                                                                      ; pin_out          ;
-; |ask_rcv|odata[3]                                                            ; |ask_rcv|odata[3]                                                                      ; pin_out          ;
-; |ask_rcv|odata[4]                                                            ; |ask_rcv|odata[4]                                                                      ; pin_out          ;
-; |ask_rcv|odata[5]                                                            ; |ask_rcv|odata[5]                                                                      ; pin_out          ;
-; |ask_rcv|odata[6]                                                            ; |ask_rcv|odata[6]                                                                      ; pin_out          ;
-; |ask_rcv|odata[7]                                                            ; |ask_rcv|odata[7]                                                                      ; pin_out          ;
-; |ask_rcv|odata[8]                                                            ; |ask_rcv|odata[8]                                                                      ; pin_out          ;
-; |ask_rcv|odata[9]                                                            ; |ask_rcv|odata[9]                                                                      ; pin_out          ;
-; |ask_rcv|odata[10]                                                           ; |ask_rcv|odata[10]                                                                     ; pin_out          ;
-; |ask_rcv|odata[11]                                                           ; |ask_rcv|odata[11]                                                                     ; pin_out          ;
-; |ask_rcv|odata[12]                                                           ; |ask_rcv|odata[12]                                                                     ; pin_out          ;
-; |ask_rcv|odata[13]                                                           ; |ask_rcv|odata[13]                                                                     ; pin_out          ;
-; |ask_rcv|Add0~1                                                              ; |ask_rcv|Add0~1                                                                        ; out0             ;
-; |ask_rcv|Add0~2                                                              ; |ask_rcv|Add0~2                                                                        ; out0             ;
-; |ask_rcv|Add0~8                                                              ; |ask_rcv|Add0~8                                                                        ; out0             ;
-; |ask_rcv|Add0~10                                                             ; |ask_rcv|Add0~10                                                                       ; out0             ;
-; |ask_rcv|Add0~12                                                             ; |ask_rcv|Add0~12                                                                       ; out0             ;
-; |ask_rcv|Add0~13                                                             ; |ask_rcv|Add0~13                                                                       ; out0             ;
-; |ask_rcv|Add0~14                                                             ; |ask_rcv|Add0~14                                                                       ; out0             ;
-; |ask_rcv|Add0~15                                                             ; |ask_rcv|Add0~15                                                                       ; out0             ;
-; |ask_rcv|Add0~16                                                             ; |ask_rcv|Add0~16                                                                       ; out0             ;
-; |ask_rcv|Add0~17                                                             ; |ask_rcv|Add0~17                                                                       ; out0             ;
-; |ask_rcv|Add0~18                                                             ; |ask_rcv|Add0~18                                                                       ; out0             ;
-; |ask_rcv|Add0~19                                                             ; |ask_rcv|Add0~19                                                                       ; out0             ;
-; |ask_rcv|Add0~20                                                             ; |ask_rcv|Add0~20                                                                       ; out0             ;
-; |ask_rcv|Add0~21                                                             ; |ask_rcv|Add0~21                                                                       ; out0             ;
-; |ask_rcv|Add0~22                                                             ; |ask_rcv|Add0~22                                                                       ; out0             ;
-; |ask_rcv|Add0~23                                                             ; |ask_rcv|Add0~23                                                                       ; out0             ;
-; |ask_rcv|Add0~24                                                             ; |ask_rcv|Add0~24                                                                       ; out0             ;
-; |ask_rcv|Add0~25                                                             ; |ask_rcv|Add0~25                                                                       ; out0             ;
-; |ask_rcv|Add0~26                                                             ; |ask_rcv|Add0~26                                                                       ; out0             ;
-; |ask_rcv|Add0~27                                                             ; |ask_rcv|Add0~27                                                                       ; out0             ;
-; |ask_rcv|Add0~28                                                             ; |ask_rcv|Add0~28                                                                       ; out0             ;
-; |ask_rcv|Add0~29                                                             ; |ask_rcv|Add0~29                                                                       ; out0             ;
-; |ask_rcv|Add0~30                                                             ; |ask_rcv|Add0~30                                                                       ; out0             ;
-; |ask_rcv|Add0~31                                                             ; |ask_rcv|Add0~31                                                                       ; out0             ;
-; |ask_rcv|Add0~32                                                             ; |ask_rcv|Add0~32                                                                       ; out0             ;
-; |ask_rcv|Add0~33                                                             ; |ask_rcv|Add0~33                                                                       ; out0             ;
-; |ask_rcv|Add0~34                                                             ; |ask_rcv|Add0~34                                                                       ; out0             ;
-; |ask_rcv|Add0~35                                                             ; |ask_rcv|Add0~35                                                                       ; out0             ;
-; |ask_rcv|Add0~36                                                             ; |ask_rcv|Add0~36                                                                       ; out0             ;
-; |ask_rcv|Add0~37                                                             ; |ask_rcv|Add0~37                                                                       ; out0             ;
-; |ask_rcv|Add0~38                                                             ; |ask_rcv|Add0~38                                                                       ; out0             ;
-; |ask_rcv|Add0~39                                                             ; |ask_rcv|Add0~39                                                                       ; out0             ;
-; |ask_rcv|Add0~40                                                             ; |ask_rcv|Add0~40                                                                       ; out0             ;
-; |ask_rcv|Add0~41                                                             ; |ask_rcv|Add0~41                                                                       ; out0             ;
-; |ask_rcv|Add0~42                                                             ; |ask_rcv|Add0~42                                                                       ; out0             ;
-; |ask_rcv|Add0~43                                                             ; |ask_rcv|Add0~43                                                                       ; out0             ;
-; |ask_rcv|Add0~44                                                             ; |ask_rcv|Add0~44                                                                       ; out0             ;
-; |ask_rcv|Add0~45                                                             ; |ask_rcv|Add0~45                                                                       ; out0             ;
-; |ask_rcv|Add0~46                                                             ; |ask_rcv|Add0~46                                                                       ; out0             ;
-; |ask_rcv|Add0~47                                                             ; |ask_rcv|Add0~47                                                                       ; out0             ;
-; |ask_rcv|Add0~48                                                             ; |ask_rcv|Add0~48                                                                       ; out0             ;
-; |ask_rcv|Add0~49                                                             ; |ask_rcv|Add0~49                                                                       ; out0             ;
-; |ask_rcv|Add0~50                                                             ; |ask_rcv|Add0~50                                                                       ; out0             ;
-; |ask_rcv|Add0~51                                                             ; |ask_rcv|Add0~51                                                                       ; out0             ;
-; |ask_rcv|Add0~52                                                             ; |ask_rcv|Add0~52                                                                       ; out0             ;
-; |ask_rcv|Add0~53                                                             ; |ask_rcv|Add0~53                                                                       ; out0             ;
-; |ask_rcv|Add0~54                                                             ; |ask_rcv|Add0~54                                                                       ; out0             ;
-; |ask_rcv|Add0~55                                                             ; |ask_rcv|Add0~55                                                                       ; out0             ;
-; |ask_rcv|Add0~56                                                             ; |ask_rcv|Add0~56                                                                       ; out0             ;
-; |ask_rcv|Add0~57                                                             ; |ask_rcv|Add0~57                                                                       ; out0             ;
-; |ask_rcv|Add0~58                                                             ; |ask_rcv|Add0~58                                                                       ; out0             ;
-; |ask_rcv|Add0~59                                                             ; |ask_rcv|Add0~59                                                                       ; out0             ;
-; |ask_rcv|Add0~60                                                             ; |ask_rcv|Add0~60                                                                       ; out0             ;
-; |ask_rcv|Add0~61                                                             ; |ask_rcv|Add0~61                                                                       ; out0             ;
-; |ask_rcv|Add0~62                                                             ; |ask_rcv|Add0~62                                                                       ; out0             ;
-; |ask_rcv|Add0~64                                                             ; |ask_rcv|Add0~64                                                                       ; out0             ;
-; |ask_rcv|Add0~66                                                             ; |ask_rcv|Add0~66                                                                       ; out0             ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1           ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT1  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT2  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT3  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT8  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT9  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT10 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT11 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT12 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT13 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT14 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT15 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2             ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT1    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT2    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT3    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT8    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT9    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT10   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT11   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT12   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT13   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT14   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT15   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1           ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT1  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT2  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT3  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT8  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT9  ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT10 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT11 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT12 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT13 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT14 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT15 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2             ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT1    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT2    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT3    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT8    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT9    ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT10   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT11   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT12   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT13   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT14   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT15   ; dataout          ;
-+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                        ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; Node Name                                                 ; Output Port Name                                                    ; Output Port Type ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; |ask_rcv|odatareg[1]                                      ; |ask_rcv|odatareg[1]                                                ; regout           ;
+; |ask_rcv|odatareg[3]                                      ; |ask_rcv|odatareg[3]                                                ; regout           ;
+; |ask_rcv|odatareg[4]                                      ; |ask_rcv|odatareg[4]                                                ; regout           ;
+; |ask_rcv|odatareg[5]                                      ; |ask_rcv|odatareg[5]                                                ; regout           ;
+; |ask_rcv|odatareg[6]                                      ; |ask_rcv|odatareg[6]                                                ; regout           ;
+; |ask_rcv|odatareg[7]                                      ; |ask_rcv|odatareg[7]                                                ; regout           ;
+; |ask_rcv|odatareg[8]                                      ; |ask_rcv|odatareg[8]                                                ; regout           ;
+; |ask_rcv|odatareg[9]                                      ; |ask_rcv|odatareg[9]                                                ; regout           ;
+; |ask_rcv|odatareg[10]                                     ; |ask_rcv|odatareg[10]                                               ; regout           ;
+; |ask_rcv|odatareg[11]                                     ; |ask_rcv|odatareg[11]                                               ; regout           ;
+; |ask_rcv|odatareg[12]                                     ; |ask_rcv|odatareg[12]                                               ; regout           ;
+; |ask_rcv|odatareg[13]                                     ; |ask_rcv|odatareg[13]                                               ; regout           ;
+; |ask_rcv|odatareg[14]                                     ; |ask_rcv|odatareg[14]                                               ; regout           ;
+; |ask_rcv|odatareg[0]~16                                   ; |ask_rcv|odatareg[0]~17                                             ; cout             ;
+; |ask_rcv|odatareg[1]~18                                   ; |ask_rcv|odatareg[1]~18                                             ; combout          ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT2   ; dataout4         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT3   ; dataout5         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT4   ; dataout6         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT5   ; dataout7         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT6   ; dataout8         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT7   ; dataout9         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT8   ; dataout10        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT9   ; dataout11        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT10  ; dataout12        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT11  ; dataout13        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT12  ; dataout14        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT13  ; dataout15        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT2   ; dataout4         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT3   ; dataout5         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT4   ; dataout6         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT5   ; dataout7         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT6   ; dataout8         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT7   ; dataout9         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT8   ; dataout10        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT9   ; dataout11        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT10  ; dataout12        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT11  ; dataout13        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT12  ; dataout14        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT13  ; dataout15        ;
+; |ask_rcv|odatareg[2]~20                                   ; |ask_rcv|odatareg[2]~20                                             ; combout          ;
+; |ask_rcv|odatareg[2]~20                                   ; |ask_rcv|odatareg[2]~21                                             ; cout             ;
+; |ask_rcv|odatareg[3]~22                                   ; |ask_rcv|odatareg[3]~22                                             ; combout          ;
+; |ask_rcv|odatareg[3]~22                                   ; |ask_rcv|odatareg[3]~23                                             ; cout             ;
+; |ask_rcv|odatareg[4]~24                                   ; |ask_rcv|odatareg[4]~24                                             ; combout          ;
+; |ask_rcv|odatareg[4]~24                                   ; |ask_rcv|odatareg[4]~25                                             ; cout             ;
+; |ask_rcv|odatareg[5]~26                                   ; |ask_rcv|odatareg[5]~26                                             ; combout          ;
+; |ask_rcv|odatareg[5]~26                                   ; |ask_rcv|odatareg[5]~27                                             ; cout             ;
+; |ask_rcv|odatareg[6]~28                                   ; |ask_rcv|odatareg[6]~28                                             ; combout          ;
+; |ask_rcv|odatareg[6]~28                                   ; |ask_rcv|odatareg[6]~29                                             ; cout             ;
+; |ask_rcv|odatareg[7]~30                                   ; |ask_rcv|odatareg[7]~30                                             ; combout          ;
+; |ask_rcv|odatareg[7]~30                                   ; |ask_rcv|odatareg[7]~31                                             ; cout             ;
+; |ask_rcv|odatareg[8]~32                                   ; |ask_rcv|odatareg[8]~32                                             ; combout          ;
+; |ask_rcv|odatareg[8]~32                                   ; |ask_rcv|odatareg[8]~33                                             ; cout             ;
+; |ask_rcv|odatareg[9]~34                                   ; |ask_rcv|odatareg[9]~34                                             ; combout          ;
+; |ask_rcv|odatareg[9]~34                                   ; |ask_rcv|odatareg[9]~35                                             ; cout             ;
+; |ask_rcv|odatareg[10]~36                                  ; |ask_rcv|odatareg[10]~36                                            ; combout          ;
+; |ask_rcv|odatareg[10]~36                                  ; |ask_rcv|odatareg[10]~37                                            ; cout             ;
+; |ask_rcv|odatareg[11]~38                                  ; |ask_rcv|odatareg[11]~38                                            ; combout          ;
+; |ask_rcv|odatareg[11]~38                                  ; |ask_rcv|odatareg[11]~39                                            ; cout             ;
+; |ask_rcv|odatareg[12]~40                                  ; |ask_rcv|odatareg[12]~40                                            ; combout          ;
+; |ask_rcv|odatareg[12]~40                                  ; |ask_rcv|odatareg[12]~41                                            ; cout             ;
+; |ask_rcv|odatareg[13]~42                                  ; |ask_rcv|odatareg[13]~42                                            ; combout          ;
+; |ask_rcv|odatareg[13]~42                                  ; |ask_rcv|odatareg[13]~43                                            ; cout             ;
+; |ask_rcv|odatareg[14]~44                                  ; |ask_rcv|odatareg[14]~44                                            ; combout          ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1           ; dataout2         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT2  ; dataout4         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT3  ; dataout5         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT4  ; dataout6         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT5  ; dataout7         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT6  ; dataout8         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT7  ; dataout9         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT8  ; dataout10        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT9  ; dataout11        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT10 ; dataout12        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT11 ; dataout13        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT12 ; dataout14        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT13 ; dataout15        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1           ; dataout2         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT2  ; dataout4         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT3  ; dataout5         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT4  ; dataout6         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT5  ; dataout7         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT6  ; dataout8         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT7  ; dataout9         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT8  ; dataout10        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT9  ; dataout11        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT10 ; dataout12        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT11 ; dataout13        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT12 ; dataout14        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT13 ; dataout15        ;
+; |ask_rcv|correlator:prmbl|Add25~0                         ; |ask_rcv|correlator:prmbl|Add25~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add25~0                         ; |ask_rcv|correlator:prmbl|Add25~1                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add25~2                         ; |ask_rcv|correlator:prmbl|Add25~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add25~2                         ; |ask_rcv|correlator:prmbl|Add25~3                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add25~4                         ; |ask_rcv|correlator:prmbl|Add25~4                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add25~4                         ; |ask_rcv|correlator:prmbl|Add25~5                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add25~6                         ; |ask_rcv|correlator:prmbl|Add25~6                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add17~0                         ; |ask_rcv|correlator:prmbl|Add17~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add17~0                         ; |ask_rcv|correlator:prmbl|Add17~1                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add17~2                         ; |ask_rcv|correlator:prmbl|Add17~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add17~2                         ; |ask_rcv|correlator:prmbl|Add17~3                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add17~4                         ; |ask_rcv|correlator:prmbl|Add17~4                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add17~4                         ; |ask_rcv|correlator:prmbl|Add17~5                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add17~6                         ; |ask_rcv|correlator:prmbl|Add17~6                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add21~0                         ; |ask_rcv|correlator:prmbl|Add21~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add21~0                         ; |ask_rcv|correlator:prmbl|Add21~1                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add21~2                         ; |ask_rcv|correlator:prmbl|Add21~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add21~2                         ; |ask_rcv|correlator:prmbl|Add21~3                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add21~4                         ; |ask_rcv|correlator:prmbl|Add21~4                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add21~4                         ; |ask_rcv|correlator:prmbl|Add21~5                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add21~6                         ; |ask_rcv|correlator:prmbl|Add21~6                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add21~6                         ; |ask_rcv|correlator:prmbl|Add21~7                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add21~8                         ; |ask_rcv|correlator:prmbl|Add21~8                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add9~0                          ; |ask_rcv|correlator:prmbl|Add9~0                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add9~0                          ; |ask_rcv|correlator:prmbl|Add9~1                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add9~2                          ; |ask_rcv|correlator:prmbl|Add9~2                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add9~2                          ; |ask_rcv|correlator:prmbl|Add9~3                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add9~4                          ; |ask_rcv|correlator:prmbl|Add9~4                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add5~0                          ; |ask_rcv|correlator:prmbl|Add5~0                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add5~0                          ; |ask_rcv|correlator:prmbl|Add5~1                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add5~2                          ; |ask_rcv|correlator:prmbl|Add5~2                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add5~2                          ; |ask_rcv|correlator:prmbl|Add5~3                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add5~4                          ; |ask_rcv|correlator:prmbl|Add5~4                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add11~0                         ; |ask_rcv|correlator:prmbl|Add11~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add11~0                         ; |ask_rcv|correlator:prmbl|Add11~1                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add11~2                         ; |ask_rcv|correlator:prmbl|Add11~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add11~2                         ; |ask_rcv|correlator:prmbl|Add11~3                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add11~4                         ; |ask_rcv|correlator:prmbl|Add11~4                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add11~4                         ; |ask_rcv|correlator:prmbl|Add11~5                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add11~6                         ; |ask_rcv|correlator:prmbl|Add11~6                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add13~0                         ; |ask_rcv|correlator:prmbl|Add13~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add13~0                         ; |ask_rcv|correlator:prmbl|Add13~1                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add13~2                         ; |ask_rcv|correlator:prmbl|Add13~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add13~2                         ; |ask_rcv|correlator:prmbl|Add13~3                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add13~4                         ; |ask_rcv|correlator:prmbl|Add13~4                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add13~4                         ; |ask_rcv|correlator:prmbl|Add13~5                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add13~6                         ; |ask_rcv|correlator:prmbl|Add13~6                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add13~6                         ; |ask_rcv|correlator:prmbl|Add13~7                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add13~8                         ; |ask_rcv|correlator:prmbl|Add13~8                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add27~0                         ; |ask_rcv|correlator:prmbl|Add27~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add27~0                         ; |ask_rcv|correlator:prmbl|Add27~1                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add27~2                         ; |ask_rcv|correlator:prmbl|Add27~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add27~2                         ; |ask_rcv|correlator:prmbl|Add27~3                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add27~4                         ; |ask_rcv|correlator:prmbl|Add27~4                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add27~4                         ; |ask_rcv|correlator:prmbl|Add27~5                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add27~6                         ; |ask_rcv|correlator:prmbl|Add27~6                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add27~6                         ; |ask_rcv|correlator:prmbl|Add27~7                                   ; cout             ;
+; |ask_rcv|correlator:prmbl|Add27~8                         ; |ask_rcv|correlator:prmbl|Add27~8                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|decision~2                      ; |ask_rcv|correlator:prmbl|decision~2                                ; cout             ;
+; |ask_rcv|correlator:prmbl|decision~4                      ; |ask_rcv|correlator:prmbl|decision~4                                ; cout             ;
+; |ask_rcv|correlator:prmbl|decision~6                      ; |ask_rcv|correlator:prmbl|decision~6                                ; cout             ;
+; |ask_rcv|correlator:prmbl|decision~8                      ; |ask_rcv|correlator:prmbl|decision~8                                ; cout             ;
+; |ask_rcv|correlator:prmbl|decision~10                     ; |ask_rcv|correlator:prmbl|decision~10                               ; cout             ;
+; |ask_rcv|correlator:prmbl|decision~12                     ; |ask_rcv|correlator:prmbl|decision~12                               ; cout             ;
+; |ask_rcv|correlator:prmbl|decision~13                     ; |ask_rcv|correlator:prmbl|decision~13                               ; combout          ;
+; |ask_rcv|syncgen:symbgen|syncclk                          ; |ask_rcv|syncgen:symbgen|syncclk                                    ; regout           ;
+; |ask_rcv|syncgen:symbgen|counter[0]                       ; |ask_rcv|syncgen:symbgen|counter[0]                                 ; regout           ;
+; |ask_rcv|syncgen:symbgen|syncclk~0                        ; |ask_rcv|syncgen:symbgen|syncclk~0                                  ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[24]                       ; |ask_rcv|correlator:prmbl|shreg[24]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[26]                       ; |ask_rcv|correlator:prmbl|shreg[26]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[25]                       ; |ask_rcv|correlator:prmbl|shreg[25]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[23]                       ; |ask_rcv|correlator:prmbl|shreg[23]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add23~0                         ; |ask_rcv|correlator:prmbl|Add23~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add23~1                         ; |ask_rcv|correlator:prmbl|Add23~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[27]                       ; |ask_rcv|correlator:prmbl|shreg[27]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[28]                       ; |ask_rcv|correlator:prmbl|shreg[28]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add26~0                         ; |ask_rcv|correlator:prmbl|Add26~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add23~2                         ; |ask_rcv|correlator:prmbl|Add23~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add26~1                         ; |ask_rcv|correlator:prmbl|Add26~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[16]                       ; |ask_rcv|correlator:prmbl|shreg[16]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[18]                       ; |ask_rcv|correlator:prmbl|shreg[18]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[17]                       ; |ask_rcv|correlator:prmbl|shreg[17]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[15]                       ; |ask_rcv|correlator:prmbl|shreg[15]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add15~0                         ; |ask_rcv|correlator:prmbl|Add15~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[19]                       ; |ask_rcv|correlator:prmbl|shreg[19]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[20]                       ; |ask_rcv|correlator:prmbl|shreg[20]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[22]                       ; |ask_rcv|correlator:prmbl|shreg[22]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[21]                       ; |ask_rcv|correlator:prmbl|shreg[21]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add19~0                         ; |ask_rcv|correlator:prmbl|Add19~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add15~1                         ; |ask_rcv|correlator:prmbl|Add15~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add19~1                         ; |ask_rcv|correlator:prmbl|Add19~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add15~2                         ; |ask_rcv|correlator:prmbl|Add15~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add19~2                         ; |ask_rcv|correlator:prmbl|Add19~2                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[8]                        ; |ask_rcv|correlator:prmbl|shreg[8]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[10]                       ; |ask_rcv|correlator:prmbl|shreg[10]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[9]                        ; |ask_rcv|correlator:prmbl|shreg[9]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[7]                        ; |ask_rcv|correlator:prmbl|shreg[7]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|Add7~0                          ; |ask_rcv|correlator:prmbl|Add7~0                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add7~1                          ; |ask_rcv|correlator:prmbl|Add7~1                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[11]                       ; |ask_rcv|correlator:prmbl|shreg[11]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[12]                       ; |ask_rcv|correlator:prmbl|shreg[12]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add10~0                         ; |ask_rcv|correlator:prmbl|Add10~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add7~2                          ; |ask_rcv|correlator:prmbl|Add7~2                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add10~1                         ; |ask_rcv|correlator:prmbl|Add10~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[1]                        ; |ask_rcv|correlator:prmbl|shreg[1]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[0]                        ; |ask_rcv|correlator:prmbl|shreg[0]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[2]                        ; |ask_rcv|correlator:prmbl|shreg[2]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|Add1~0                          ; |ask_rcv|correlator:prmbl|Add1~0                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[3]                        ; |ask_rcv|correlator:prmbl|shreg[3]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|Add1~1                          ; |ask_rcv|correlator:prmbl|Add1~1                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[4]                        ; |ask_rcv|correlator:prmbl|shreg[4]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|Add3~0                          ; |ask_rcv|correlator:prmbl|Add3~0                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add3~1                          ; |ask_rcv|correlator:prmbl|Add3~1                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[6]                        ; |ask_rcv|correlator:prmbl|shreg[6]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[5]                        ; |ask_rcv|correlator:prmbl|shreg[5]                                  ; regout           ;
+; |ask_rcv|correlator:prmbl|Add4~0                          ; |ask_rcv|correlator:prmbl|Add4~0                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add3~2                          ; |ask_rcv|correlator:prmbl|Add3~2                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add4~1                          ; |ask_rcv|correlator:prmbl|Add4~1                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[14]                       ; |ask_rcv|correlator:prmbl|shreg[14]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[13]                       ; |ask_rcv|correlator:prmbl|shreg[13]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add12~0                         ; |ask_rcv|correlator:prmbl|Add12~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add12~1                         ; |ask_rcv|correlator:prmbl|Add12~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[29]                       ; |ask_rcv|correlator:prmbl|shreg[29]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|shreg[30]                       ; |ask_rcv|correlator:prmbl|shreg[30]                                 ; regout           ;
+; |ask_rcv|correlator:prmbl|Add28~0                         ; |ask_rcv|correlator:prmbl|Add28~0                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|Add28~1                         ; |ask_rcv|correlator:prmbl|Add28~1                                   ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[31]                       ; |ask_rcv|correlator:prmbl|shreg[31]                                 ; regout           ;
+; |ask_rcv|syncgen:symbgen|counter[0]~0                     ; |ask_rcv|syncgen:symbgen|counter[0]~0                               ; combout          ;
+; |ask_rcv|odata[1]                                         ; |ask_rcv|odata[1]                                                   ; padio            ;
+; |ask_rcv|odata[3]                                         ; |ask_rcv|odata[3]                                                   ; padio            ;
+; |ask_rcv|odata[4]                                         ; |ask_rcv|odata[4]                                                   ; padio            ;
+; |ask_rcv|odata[5]                                         ; |ask_rcv|odata[5]                                                   ; padio            ;
+; |ask_rcv|odata[6]                                         ; |ask_rcv|odata[6]                                                   ; padio            ;
+; |ask_rcv|odata[7]                                         ; |ask_rcv|odata[7]                                                   ; padio            ;
+; |ask_rcv|odata[8]                                         ; |ask_rcv|odata[8]                                                   ; padio            ;
+; |ask_rcv|odata[9]                                         ; |ask_rcv|odata[9]                                                   ; padio            ;
+; |ask_rcv|odata[10]                                        ; |ask_rcv|odata[10]                                                  ; padio            ;
+; |ask_rcv|odata[11]                                        ; |ask_rcv|odata[11]                                                  ; padio            ;
+; |ask_rcv|odata[12]                                        ; |ask_rcv|odata[12]                                                  ; padio            ;
+; |ask_rcv|odata[13]                                        ; |ask_rcv|odata[13]                                                  ; padio            ;
+; |ask_rcv|odata[14]                                        ; |ask_rcv|odata[14]                                                  ; padio            ;
+; |ask_rcv|clk                                              ; |ask_rcv|clk~corein                                                 ; combout          ;
+; |ask_rcv|qdata[0]                                         ; |ask_rcv|qdata[0]~corein                                            ; combout          ;
+; |ask_rcv|idata[0]                                         ; |ask_rcv|idata[0]~corein                                            ; combout          ;
+; |ask_rcv|qdata[1]                                         ; |ask_rcv|qdata[1]~corein                                            ; combout          ;
+; |ask_rcv|qdata[2]                                         ; |ask_rcv|qdata[2]~corein                                            ; combout          ;
+; |ask_rcv|qdata[3]                                         ; |ask_rcv|qdata[3]~corein                                            ; combout          ;
+; |ask_rcv|qdata[4]                                         ; |ask_rcv|qdata[4]~corein                                            ; combout          ;
+; |ask_rcv|qdata[5]                                         ; |ask_rcv|qdata[5]~corein                                            ; combout          ;
+; |ask_rcv|qdata[6]                                         ; |ask_rcv|qdata[6]~corein                                            ; combout          ;
+; |ask_rcv|idata[1]                                         ; |ask_rcv|idata[1]~corein                                            ; combout          ;
+; |ask_rcv|idata[2]                                         ; |ask_rcv|idata[2]~corein                                            ; combout          ;
+; |ask_rcv|idata[3]                                         ; |ask_rcv|idata[3]~corein                                            ; combout          ;
+; |ask_rcv|idata[4]                                         ; |ask_rcv|idata[4]~corein                                            ; combout          ;
+; |ask_rcv|idata[5]                                         ; |ask_rcv|idata[5]~corein                                            ; combout          ;
+; |ask_rcv|idata[6]                                         ; |ask_rcv|idata[6]~corein                                            ; combout          ;
+; |ask_rcv|serialin                                         ; |ask_rcv|serialin~corein                                            ; combout          ;
+; |ask_rcv|clk~clkctrl                                      ; |ask_rcv|clk~clkctrl                                                ; outclk           ;
+; |ask_rcv|correlator:prmbl|shreg[22]~feeder                ; |ask_rcv|correlator:prmbl|shreg[22]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[27]~feeder                ; |ask_rcv|correlator:prmbl|shreg[27]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[16]~feeder                ; |ask_rcv|correlator:prmbl|shreg[16]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[14]~feeder                ; |ask_rcv|correlator:prmbl|shreg[14]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[18]~feeder                ; |ask_rcv|correlator:prmbl|shreg[18]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[19]~feeder                ; |ask_rcv|correlator:prmbl|shreg[19]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[7]~feeder                 ; |ask_rcv|correlator:prmbl|shreg[7]~feeder                           ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[8]~feeder                 ; |ask_rcv|correlator:prmbl|shreg[8]~feeder                           ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[6]~feeder                 ; |ask_rcv|correlator:prmbl|shreg[6]~feeder                           ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[10]~feeder                ; |ask_rcv|correlator:prmbl|shreg[10]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[0]~feeder                 ; |ask_rcv|correlator:prmbl|shreg[0]~feeder                           ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[13]~feeder                ; |ask_rcv|correlator:prmbl|shreg[13]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[12]~feeder                ; |ask_rcv|correlator:prmbl|shreg[12]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[28]~feeder                ; |ask_rcv|correlator:prmbl|shreg[28]~feeder                          ; combout          ;
+; |ask_rcv|correlator:prmbl|shreg[31]~feeder                ; |ask_rcv|correlator:prmbl|shreg[31]~feeder                          ; combout          ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                                                                                ;
-+------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                    ; Output Port Name                                                                      ; Output Port Type ;
-+------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+
-; |ask_rcv|odatareg[0]                                                         ; |ask_rcv|odatareg[0]                                                                  ; regout           ;
-; |ask_rcv|odatareg[2]                                                         ; |ask_rcv|odatareg[2]                                                                  ; regout           ;
-; |ask_rcv|odatareg[15]                                                        ; |ask_rcv|odatareg[15]                                                                 ; regout           ;
-; |ask_rcv|idata[7]                                                            ; |ask_rcv|idata[7]                                                                     ; out              ;
-; |ask_rcv|qdata[7]                                                            ; |ask_rcv|qdata[7]                                                                     ; out              ;
-; |ask_rcv|odata[0]                                                            ; |ask_rcv|odata[0]                                                                     ; pin_out          ;
-; |ask_rcv|odata[2]                                                            ; |ask_rcv|odata[2]                                                                     ; pin_out          ;
-; |ask_rcv|odata[15]                                                           ; |ask_rcv|odata[15]                                                                    ; pin_out          ;
-; |ask_rcv|Add0~0                                                              ; |ask_rcv|Add0~0                                                                       ; out0             ;
-; |ask_rcv|Add0~3                                                              ; |ask_rcv|Add0~3                                                                       ; out0             ;
-; |ask_rcv|Add0~4                                                              ; |ask_rcv|Add0~4                                                                       ; out0             ;
-; |ask_rcv|Add0~5                                                              ; |ask_rcv|Add0~5                                                                       ; out0             ;
-; |ask_rcv|Add0~6                                                              ; |ask_rcv|Add0~6                                                                       ; out0             ;
-; |ask_rcv|Add0~7                                                              ; |ask_rcv|Add0~7                                                                       ; out0             ;
-; |ask_rcv|Add0~9                                                              ; |ask_rcv|Add0~9                                                                       ; out0             ;
-; |ask_rcv|Add0~11                                                             ; |ask_rcv|Add0~11                                                                      ; out0             ;
-; |ask_rcv|Add0~68                                                             ; |ask_rcv|Add0~68                                                                      ; out0             ;
-; |ask_rcv|Add0~69                                                             ; |ask_rcv|Add0~69                                                                      ; out0             ;
-; |ask_rcv|Add0~70                                                             ; |ask_rcv|Add0~70                                                                      ; out0             ;
-; |ask_rcv|Add0~71                                                             ; |ask_rcv|Add0~71                                                                      ; out0             ;
-; |ask_rcv|Add0~72                                                             ; |ask_rcv|Add0~72                                                                      ; out0             ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT5 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT6 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT7 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT5   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT6   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT7   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT5 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT6 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT7 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT5   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT6   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT7   ; dataout          ;
-+------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                           ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; Node Name                                                 ; Output Port Name                                                    ; Output Port Type ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; |ask_rcv|odatareg[0]                                      ; |ask_rcv|odatareg[0]                                                ; regout           ;
+; |ask_rcv|odatareg[2]                                      ; |ask_rcv|odatareg[2]                                                ; regout           ;
+; |ask_rcv|odatareg[15]                                     ; |ask_rcv|odatareg[15]                                               ; regout           ;
+; |ask_rcv|odatareg[0]~16                                   ; |ask_rcv|odatareg[0]~16                                             ; combout          ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT14  ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT15  ; dataout17        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT14  ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT15  ; dataout17        ;
+; |ask_rcv|odatareg[14]~44                                  ; |ask_rcv|odatareg[14]~45                                            ; cout             ;
+; |ask_rcv|odatareg[15]~46                                  ; |ask_rcv|odatareg[15]~46                                            ; combout          ;
+; |ask_rcv|correlator:prmbl|decision                        ; |ask_rcv|correlator:prmbl|decision                                  ; regout           ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~0         ; dataout0         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~1         ; dataout1         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT1  ; dataout3         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT14 ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT15 ; dataout17        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~0         ; dataout0         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~1         ; dataout1         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT1  ; dataout3         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT14 ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT15 ; dataout17        ;
+; |ask_rcv|correlator:prmbl|Add9~4                          ; |ask_rcv|correlator:prmbl|Add9~5                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add9~6                          ; |ask_rcv|correlator:prmbl|Add9~6                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add5~4                          ; |ask_rcv|correlator:prmbl|Add5~5                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add5~6                          ; |ask_rcv|correlator:prmbl|Add5~6                                    ; combout          ;
+; |ask_rcv|preamble_lock~reg0                               ; |ask_rcv|preamble_lock~reg0                                         ; regout           ;
+; |ask_rcv|syncwrd_lock~reg0                                ; |ask_rcv|syncwrd_lock~reg0                                          ; regout           ;
+; |ask_rcv|comb                                             ; |ask_rcv|comb                                                       ; combout          ;
+; |ask_rcv|correlator:syncwrd|decision                      ; |ask_rcv|correlator:syncwrd|decision                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[1]                      ; |ask_rcv|correlator:syncwrd|shreg[1]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[3]                      ; |ask_rcv|correlator:syncwrd|shreg[3]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[0]                      ; |ask_rcv|correlator:syncwrd|shreg[0]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[4]                      ; |ask_rcv|correlator:syncwrd|shreg[4]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[6]                      ; |ask_rcv|correlator:syncwrd|shreg[6]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|Add5~0                        ; |ask_rcv|correlator:syncwrd|Add5~0                                  ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[2]                      ; |ask_rcv|correlator:syncwrd|shreg[2]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[5]                      ; |ask_rcv|correlator:syncwrd|shreg[5]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[7]                      ; |ask_rcv|correlator:syncwrd|shreg[7]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|Add5~1                        ; |ask_rcv|correlator:syncwrd|Add5~1                                  ; combout          ;
+; |ask_rcv|correlator:syncwrd|Add5~2                        ; |ask_rcv|correlator:syncwrd|Add5~2                                  ; combout          ;
+; |ask_rcv|~GND                                             ; |ask_rcv|~GND                                                       ; combout          ;
+; |ask_rcv|odata[0]                                         ; |ask_rcv|odata[0]                                                   ; padio            ;
+; |ask_rcv|odata[2]                                         ; |ask_rcv|odata[2]                                                   ; padio            ;
+; |ask_rcv|odata[15]                                        ; |ask_rcv|odata[15]                                                  ; padio            ;
+; |ask_rcv|preamble_lock                                    ; |ask_rcv|preamble_lock                                              ; padio            ;
+; |ask_rcv|syncwrd_lock                                     ; |ask_rcv|syncwrd_lock                                               ; padio            ;
+; |ask_rcv|enabled_symbclk                                  ; |ask_rcv|enabled_symbclk                                            ; padio            ;
+; |ask_rcv|qdata[7]                                         ; |ask_rcv|qdata[7]~corein                                            ; combout          ;
+; |ask_rcv|idata[7]                                         ; |ask_rcv|idata[7]~corein                                            ; combout          ;
+; |ask_rcv|comb~clkctrl                                     ; |ask_rcv|comb~clkctrl                                               ; outclk           ;
+; |ask_rcv|correlator:syncwrd|shreg[2]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[2]~feeder                         ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[3]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[3]~feeder                         ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[5]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[5]~feeder                         ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[4]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[4]~feeder                         ; combout          ;
+; |ask_rcv|preamble_lock~reg0feeder                         ; |ask_rcv|preamble_lock~reg0feeder                                   ; combout          ;
+; |ask_rcv|syncwrd_lock~reg0feeder                          ; |ask_rcv|syncwrd_lock~reg0feeder                                    ; combout          ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                                                                ;
-+------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                    ; Output Port Name                                                                      ; Output Port Type ;
-+------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+
-; |ask_rcv|odatareg[0]                                                         ; |ask_rcv|odatareg[0]                                                                  ; regout           ;
-; |ask_rcv|odatareg[2]                                                         ; |ask_rcv|odatareg[2]                                                                  ; regout           ;
-; |ask_rcv|odatareg[14]                                                        ; |ask_rcv|odatareg[14]                                                                 ; regout           ;
-; |ask_rcv|odatareg[15]                                                        ; |ask_rcv|odatareg[15]                                                                 ; regout           ;
-; |ask_rcv|idata[6]                                                            ; |ask_rcv|idata[6]                                                                     ; out              ;
-; |ask_rcv|idata[7]                                                            ; |ask_rcv|idata[7]                                                                     ; out              ;
-; |ask_rcv|qdata[6]                                                            ; |ask_rcv|qdata[6]                                                                     ; out              ;
-; |ask_rcv|qdata[7]                                                            ; |ask_rcv|qdata[7]                                                                     ; out              ;
-; |ask_rcv|odata[0]                                                            ; |ask_rcv|odata[0]                                                                     ; pin_out          ;
-; |ask_rcv|odata[2]                                                            ; |ask_rcv|odata[2]                                                                     ; pin_out          ;
-; |ask_rcv|odata[14]                                                           ; |ask_rcv|odata[14]                                                                    ; pin_out          ;
-; |ask_rcv|odata[15]                                                           ; |ask_rcv|odata[15]                                                                    ; pin_out          ;
-; |ask_rcv|Add0~0                                                              ; |ask_rcv|Add0~0                                                                       ; out0             ;
-; |ask_rcv|Add0~3                                                              ; |ask_rcv|Add0~3                                                                       ; out0             ;
-; |ask_rcv|Add0~4                                                              ; |ask_rcv|Add0~4                                                                       ; out0             ;
-; |ask_rcv|Add0~5                                                              ; |ask_rcv|Add0~5                                                                       ; out0             ;
-; |ask_rcv|Add0~6                                                              ; |ask_rcv|Add0~6                                                                       ; out0             ;
-; |ask_rcv|Add0~7                                                              ; |ask_rcv|Add0~7                                                                       ; out0             ;
-; |ask_rcv|Add0~9                                                              ; |ask_rcv|Add0~9                                                                       ; out0             ;
-; |ask_rcv|Add0~11                                                             ; |ask_rcv|Add0~11                                                                      ; out0             ;
-; |ask_rcv|Add0~63                                                             ; |ask_rcv|Add0~63                                                                      ; out0             ;
-; |ask_rcv|Add0~65                                                             ; |ask_rcv|Add0~65                                                                      ; out0             ;
-; |ask_rcv|Add0~67                                                             ; |ask_rcv|Add0~67                                                                      ; out0             ;
-; |ask_rcv|Add0~68                                                             ; |ask_rcv|Add0~68                                                                      ; out0             ;
-; |ask_rcv|Add0~69                                                             ; |ask_rcv|Add0~69                                                                      ; out0             ;
-; |ask_rcv|Add0~70                                                             ; |ask_rcv|Add0~70                                                                      ; out0             ;
-; |ask_rcv|Add0~71                                                             ; |ask_rcv|Add0~71                                                                      ; out0             ;
-; |ask_rcv|Add0~72                                                             ; |ask_rcv|Add0~72                                                                      ; out0             ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT4 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT5 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT6 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT7 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT4   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT5   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT6   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT7   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT4 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT5 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT6 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_mult:mac_mult1~DATAOUT7 ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT4   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT5   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT6   ; dataout          ;
-; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2   ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|cycloneii_mac_out:mac_out2~DATAOUT7   ; dataout          ;
-+------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                           ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; Node Name                                                 ; Output Port Name                                                    ; Output Port Type ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; |ask_rcv|odatareg[0]                                      ; |ask_rcv|odatareg[0]                                                ; regout           ;
+; |ask_rcv|odatareg[2]                                      ; |ask_rcv|odatareg[2]                                                ; regout           ;
+; |ask_rcv|odatareg[15]                                     ; |ask_rcv|odatareg[15]                                               ; regout           ;
+; |ask_rcv|odatareg[0]~16                                   ; |ask_rcv|odatareg[0]~16                                             ; combout          ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT14  ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_out2~DATAOUT15  ; dataout17        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT14  ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2  ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_out2~DATAOUT15  ; dataout17        ;
+; |ask_rcv|odatareg[14]~44                                  ; |ask_rcv|odatareg[14]~45                                            ; cout             ;
+; |ask_rcv|odatareg[15]~46                                  ; |ask_rcv|odatareg[15]~46                                            ; combout          ;
+; |ask_rcv|correlator:prmbl|decision                        ; |ask_rcv|correlator:prmbl|decision                                  ; regout           ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~0         ; dataout0         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~1         ; dataout1         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT1  ; dataout3         ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT14 ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated|mac_mult1~DATAOUT15 ; dataout17        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~0         ; dataout0         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~1         ; dataout1         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT1  ; dataout3         ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT14 ; dataout16        ;
+; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1 ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated|mac_mult1~DATAOUT15 ; dataout17        ;
+; |ask_rcv|correlator:prmbl|Add9~4                          ; |ask_rcv|correlator:prmbl|Add9~5                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add9~6                          ; |ask_rcv|correlator:prmbl|Add9~6                                    ; combout          ;
+; |ask_rcv|correlator:prmbl|Add5~4                          ; |ask_rcv|correlator:prmbl|Add5~5                                    ; cout             ;
+; |ask_rcv|correlator:prmbl|Add5~6                          ; |ask_rcv|correlator:prmbl|Add5~6                                    ; combout          ;
+; |ask_rcv|preamble_lock~reg0                               ; |ask_rcv|preamble_lock~reg0                                         ; regout           ;
+; |ask_rcv|syncwrd_lock~reg0                                ; |ask_rcv|syncwrd_lock~reg0                                          ; regout           ;
+; |ask_rcv|comb                                             ; |ask_rcv|comb                                                       ; combout          ;
+; |ask_rcv|correlator:syncwrd|decision                      ; |ask_rcv|correlator:syncwrd|decision                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[1]                      ; |ask_rcv|correlator:syncwrd|shreg[1]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[3]                      ; |ask_rcv|correlator:syncwrd|shreg[3]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[0]                      ; |ask_rcv|correlator:syncwrd|shreg[0]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[4]                      ; |ask_rcv|correlator:syncwrd|shreg[4]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[6]                      ; |ask_rcv|correlator:syncwrd|shreg[6]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|Add5~0                        ; |ask_rcv|correlator:syncwrd|Add5~0                                  ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[2]                      ; |ask_rcv|correlator:syncwrd|shreg[2]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[5]                      ; |ask_rcv|correlator:syncwrd|shreg[5]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|shreg[7]                      ; |ask_rcv|correlator:syncwrd|shreg[7]                                ; regout           ;
+; |ask_rcv|correlator:syncwrd|Add5~1                        ; |ask_rcv|correlator:syncwrd|Add5~1                                  ; combout          ;
+; |ask_rcv|correlator:syncwrd|Add5~2                        ; |ask_rcv|correlator:syncwrd|Add5~2                                  ; combout          ;
+; |ask_rcv|~GND                                             ; |ask_rcv|~GND                                                       ; combout          ;
+; |ask_rcv|odata[0]                                         ; |ask_rcv|odata[0]                                                   ; padio            ;
+; |ask_rcv|odata[2]                                         ; |ask_rcv|odata[2]                                                   ; padio            ;
+; |ask_rcv|odata[15]                                        ; |ask_rcv|odata[15]                                                  ; padio            ;
+; |ask_rcv|preamble_lock                                    ; |ask_rcv|preamble_lock                                              ; padio            ;
+; |ask_rcv|syncwrd_lock                                     ; |ask_rcv|syncwrd_lock                                               ; padio            ;
+; |ask_rcv|enabled_symbclk                                  ; |ask_rcv|enabled_symbclk                                            ; padio            ;
+; |ask_rcv|qdata[7]                                         ; |ask_rcv|qdata[7]~corein                                            ; combout          ;
+; |ask_rcv|idata[7]                                         ; |ask_rcv|idata[7]~corein                                            ; combout          ;
+; |ask_rcv|comb~clkctrl                                     ; |ask_rcv|comb~clkctrl                                               ; outclk           ;
+; |ask_rcv|correlator:syncwrd|shreg[2]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[2]~feeder                         ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[3]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[3]~feeder                         ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[5]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[5]~feeder                         ; combout          ;
+; |ask_rcv|correlator:syncwrd|shreg[4]~feeder               ; |ask_rcv|correlator:syncwrd|shreg[4]~feeder                         ; combout          ;
+; |ask_rcv|preamble_lock~reg0feeder                         ; |ask_rcv|preamble_lock~reg0feeder                                   ; combout          ;
+; |ask_rcv|syncwrd_lock~reg0feeder                          ; |ask_rcv|syncwrd_lock~reg0feeder                                    ; combout          ;
++-----------------------------------------------------------+---------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -363,19 +520,59 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 18 14:20:22 2020
+    Info: Processing started: Tue Feb 25 16:32:19 2020
 Info: Command: quartus_sim --simulation_results_format=VWF ask_rcv -c ask_rcv
 Info (324025): Using vector source file "C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[31]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[30]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[29]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[28]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[27]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[26]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[25]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[24]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[23]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[22]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[21]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[20]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[19]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[18]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[17]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[16]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|decision~reg0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|decision~reg0" in design.
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      76.34 %
-Info (328052): Number of transitions in simulation is 6402
+Info (328053): Simulation coverage is      82.45 %
+Info (328052): Number of transitions in simulation is 22794
 Info (324045): Vector file ask_rcv.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4456 megabytes
-    Info: Processing ended: Tue Feb 18 14:20:22 2020
-    Info: Elapsed time: 00:00:00
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4486 megabytes
+    Info: Processing ended: Tue Feb 25 16:32:20 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

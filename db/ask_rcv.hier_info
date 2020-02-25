@@ -1,20 +1,5 @@
 |ask_rcv
-clk => odatareg[0].CLK
-clk => odatareg[1].CLK
-clk => odatareg[2].CLK
-clk => odatareg[3].CLK
-clk => odatareg[4].CLK
-clk => odatareg[5].CLK
-clk => odatareg[6].CLK
-clk => odatareg[7].CLK
-clk => odatareg[8].CLK
-clk => odatareg[9].CLK
-clk => odatareg[10].CLK
-clk => odatareg[11].CLK
-clk => odatareg[12].CLK
-clk => odatareg[13].CLK
-clk => odatareg[14].CLK
-clk => odatareg[15].CLK
+clk => clk~0.IN2
 idata[0] => Mult0.IN14
 idata[0] => Mult0.IN15
 idata[1] => Mult0.IN12
@@ -47,6 +32,7 @@ qdata[6] => Mult1.IN2
 qdata[6] => Mult1.IN3
 qdata[7] => Mult1.IN0
 qdata[7] => Mult1.IN1
+serialin => serialin~0.IN2
 odata[0] <= odatareg[0].DB_MAX_OUTPUT_PORT_TYPE
 odata[1] <= odatareg[1].DB_MAX_OUTPUT_PORT_TYPE
 odata[2] <= odatareg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -63,5 +49,70 @@ odata[12] <= odatareg[12].DB_MAX_OUTPUT_PORT_TYPE
 odata[13] <= odatareg[13].DB_MAX_OUTPUT_PORT_TYPE
 odata[14] <= odatareg[14].DB_MAX_OUTPUT_PORT_TYPE
 odata[15] <= odatareg[15].DB_MAX_OUTPUT_PORT_TYPE
+preamble_lock <= preamble_lock~reg0.DB_MAX_OUTPUT_PORT_TYPE
+syncwrd_lock <= syncwrd_lock~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enabled_symbclk <= enabled_symbclk~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ask_rcv|correlator:prmbl
+sampleclk => decision~reg0.CLK
+sampleclk => shreg[0].CLK
+sampleclk => shreg[1].CLK
+sampleclk => shreg[2].CLK
+sampleclk => shreg[3].CLK
+sampleclk => shreg[4].CLK
+sampleclk => shreg[5].CLK
+sampleclk => shreg[6].CLK
+sampleclk => shreg[7].CLK
+sampleclk => shreg[8].CLK
+sampleclk => shreg[9].CLK
+sampleclk => shreg[10].CLK
+sampleclk => shreg[11].CLK
+sampleclk => shreg[12].CLK
+sampleclk => shreg[13].CLK
+sampleclk => shreg[14].CLK
+sampleclk => shreg[15].CLK
+sampleclk => shreg[16].CLK
+sampleclk => shreg[17].CLK
+sampleclk => shreg[18].CLK
+sampleclk => shreg[19].CLK
+sampleclk => shreg[20].CLK
+sampleclk => shreg[21].CLK
+sampleclk => shreg[22].CLK
+sampleclk => shreg[23].CLK
+sampleclk => shreg[24].CLK
+sampleclk => shreg[25].CLK
+sampleclk => shreg[26].CLK
+sampleclk => shreg[27].CLK
+sampleclk => shreg[28].CLK
+sampleclk => shreg[29].CLK
+sampleclk => shreg[30].CLK
+sampleclk => shreg[31].CLK
+serdata => shreg[31].DATAIN
+decision <= decision~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ask_rcv|correlator:syncwrd
+sampleclk => decision~reg0.CLK
+sampleclk => shreg[0].CLK
+sampleclk => shreg[1].CLK
+sampleclk => shreg[2].CLK
+sampleclk => shreg[3].CLK
+sampleclk => shreg[4].CLK
+sampleclk => shreg[5].CLK
+sampleclk => shreg[6].CLK
+sampleclk => shreg[7].CLK
+serdata => shreg[7].DATAIN
+decision <= decision~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ask_rcv|syncgen:symbgen
+clk => syncclk~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+sync => syncclk~reg0.ACLR
+sync => counter[0].ACLR
+sync => counter[1].ACLR
+syncclk <= syncclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
