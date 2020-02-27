@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ask_rcv
-Tue Feb 25 15:26:15 2020
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Thu Feb 27 02:55:11 2020
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,17 +13,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: correlator:prmbl
- 12. Parameter Settings for User Entity Instance: correlator:syncwrd
- 13. Parameter Settings for User Entity Instance: syncgen:symbgen
- 14. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 16. lpm_mult Parameter Settings by Entity Instance
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: symbol_syncroniser:sync
+ 11. Parameter Settings for User Entity Instance: symbol_syncroniser:sync|correlator:prmbl
+ 12. Parameter Settings for User Entity Instance: symbol_syncroniser:sync|syncgen:symbgen
+ 13. Parameter Settings for User Entity Instance: symbol_syncroniser:sync|correlator:syncwrd
+ 14. Port Connectivity Checks: "symbol_syncroniser:sync|correlator:syncwrd"
+ 15. Port Connectivity Checks: "symbol_syncroniser:sync|correlator:prmbl"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -49,19 +48,19 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 25 15:26:15 2020           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 27 02:55:11 2020           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ask_rcv                                         ;
 ; Top-level Entity Name              ; ask_rcv                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 134                                             ;
-;     Total combinational functions  ; 92                                              ;
-;     Dedicated logic registers      ; 62                                              ;
-; Total registers                    ; 62                                              ;
-; Total pins                         ; 37                                              ;
+; Total logic elements               ; 118                                             ;
+;     Total combinational functions  ; 76                                              ;
+;     Dedicated logic registers      ; 46                                              ;
+; Total registers                    ; 46                                              ;
+; Total pins                         ; 4                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 2                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
@@ -74,6 +73,8 @@ applicable agreement for further details.
 ; Device                                                                     ; EP2C5T144C6        ;                    ;
 ; Top-level entity name                                                      ; ask_rcv            ; ask_rcv            ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
+; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
 ; Type of Retiming Performed During Resynthesis                              ; Full               ;                    ;
 ; Resynthesis Optimization Effort                                            ; Normal             ;                    ;
 ; Physical Synthesis Level for Resynthesis                                   ; Normal             ;                    ;
@@ -85,7 +86,6 @@ applicable agreement for further details.
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
 ; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
 ; Safe State Machine                                                         ; Off                ; Off                ;
@@ -161,25 +161,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 6      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-; ask_rcv.v                        ; yes             ; User Verilog HDL File        ; C:/Users/petrenko.a/Documents/ask_rcv/ask_rcv.v                   ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_o5t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/petrenko.a/Documents/ask_rcv/db/mult_o5t.tdf             ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; ask_rcv.v                        ; yes             ; User Verilog HDL File  ; /home/leha/ask_rcv/ask_rcv.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -187,74 +180,53 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 134   ;
+; Estimated Total logic elements              ; 118   ;
 ;                                             ;       ;
-; Total combinational functions               ; 92    ;
+; Total combinational functions               ; 76    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 15    ;
-;     -- 3 input functions                    ; 43    ;
-;     -- <=2 input functions                  ; 34    ;
+;     -- 3 input functions                    ; 30    ;
+;     -- <=2 input functions                  ; 31    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 45    ;
-;     -- arithmetic mode                      ; 47    ;
+;     -- normal mode                          ; 43    ;
+;     -- arithmetic mode                      ; 33    ;
 ;                                             ;       ;
-; Total registers                             ; 62    ;
-;     -- Dedicated logic registers            ; 62    ;
+; Total registers                             ; 46    ;
+;     -- Dedicated logic registers            ; 46    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 37    ;
-; Embedded Multiplier 9-bit elements          ; 2     ;
+; I/O pins                                    ; 4     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 51    ;
-; Total fan-out                               ; 401   ;
-; Average fan-out                             ; 2.06  ;
+; Maximum fan-out                             ; 35    ;
+; Total fan-out                               ; 292   ;
+; Average fan-out                             ; 2.32  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
-; |ask_rcv                        ; 92 (18)           ; 62 (18)      ; 0           ; 2            ; 2       ; 0         ; 37   ; 0            ; |ask_rcv                                        ; work         ;
-;    |correlator:prmbl|           ; 69 (69)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|correlator:prmbl                       ; work         ;
-;    |correlator:syncwrd|         ; 3 (3)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|correlator:syncwrd                     ; work         ;
-;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult0                         ; work         ;
-;       |mult_o5t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult0|mult_o5t:auto_generated ; work         ;
-;    |lpm_mult:Mult1|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult1                         ; work         ;
-;       |mult_o5t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |ask_rcv|lpm_mult:Mult1|mult_o5t:auto_generated ; work         ;
-;    |syncgen:symbgen|            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|syncgen:symbgen                        ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; |ask_rcv                     ; 76 (0)            ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |ask_rcv                                            ; work         ;
+;    |symbol_syncroniser:sync| ; 76 (2)            ; 46 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync                    ; work         ;
+;       |correlator:prmbl|     ; 69 (69)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl   ; work         ;
+;       |correlator:syncwrd|   ; 3 (3)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd ; work         ;
+;       |syncgen:symbgen|      ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen    ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 2           ;
-; Simple Multipliers (18-bit)           ; 0           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 2           ;
-; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 2           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; syncgen:symbgen|counter[1]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++----------------------------------------------------+----------------------------------------+
+; Register name                                      ; Reason for Removal                     ;
++----------------------------------------------------+----------------------------------------+
+; symbol_syncroniser:sync|syncgen:symbgen|counter[1] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1              ;                                        ;
++----------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -262,149 +234,82 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 62    ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: correlator:prmbl       ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; WIDTH          ; 32                               ; Signed Integer  ;
-; TEMPLATE       ; 11110000111100001111000011110000 ; Unsigned Binary ;
-; BORDER         ; 31                               ; Signed Integer  ;
-+----------------+----------------------------------+-----------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: symbol_syncroniser:sync   ;
++-------------------+----------------------------------+-----------------+
+; Parameter Name    ; Value                            ; Type            ;
++-------------------+----------------------------------+-----------------+
+; PREAMBLE_WIDTH    ; 32                               ; Signed Integer  ;
+; PREAMBLE          ; 11110000111100001111000011110000 ; Unsigned Binary ;
+; PREAMBLE_BORDER   ; 31                               ; Signed Integer  ;
+; SYNCWORD_WIDTH    ; 8                                ; Signed Integer  ;
+; SYNCWORD          ; 11100101                         ; Unsigned Binary ;
+; SYNCWORD_BORDER   ; 7                                ; Signed Integer  ;
+; SYMBCLK_PRESCALER ; 2                                ; Signed Integer  ;
++-------------------+----------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: correlator:syncwrd ;
-+----------------+----------+-------------------------------------+
-; Parameter Name ; Value    ; Type                                ;
-+----------------+----------+-------------------------------------+
-; WIDTH          ; 8        ; Signed Integer                      ;
-; TEMPLATE       ; 10100111 ; Unsigned Binary                     ;
-; BORDER         ; 7        ; Signed Integer                      ;
-+----------------+----------+-------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: symbol_syncroniser:sync|correlator:prmbl ;
++----------------+----------------------------------+-----------------------------------+
+; Parameter Name ; Value                            ; Type                              ;
++----------------+----------------------------------+-----------------------------------+
+; WIDTH          ; 32                               ; Signed Integer                    ;
+; TEMPLATE       ; 11110000111100001111000011110000 ; Unsigned Binary                   ;
+; BORDER         ; 31                               ; Signed Integer                    ;
++----------------+----------------------------------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: syncgen:symbgen ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; PRESCALER      ; 2     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: symbol_syncroniser:sync|syncgen:symbgen ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; PRESCALER      ; 2     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 8          ; Untyped             ;
-; LPM_WIDTHB                                     ; 8          ; Untyped             ;
-; LPM_WIDTHP                                     ; 16         ; Untyped             ;
-; LPM_WIDTHR                                     ; 16         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_o5t   ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: symbol_syncroniser:sync|correlator:syncwrd ;
++----------------+----------+-------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                        ;
++----------------+----------+-------------------------------------------------------------+
+; WIDTH          ; 8        ; Signed Integer                                              ;
+; TEMPLATE       ; 11100101 ; Unsigned Binary                                             ;
+; BORDER         ; 7        ; Signed Integer                                              ;
++----------------+----------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 8          ; Untyped             ;
-; LPM_WIDTHB                                     ; 8          ; Untyped             ;
-; LPM_WIDTHP                                     ; 16         ; Untyped             ;
-; LPM_WIDTHR                                     ; 16         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_o5t   ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "symbol_syncroniser:sync|correlator:syncwrd"                                          ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; debug ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 2              ;
-; Entity Instance                       ; lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 8              ;
-;     -- LPM_WIDTHB                     ; 8              ;
-;     -- LPM_WIDTHP                     ; 16             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8              ;
-;     -- LPM_WIDTHB                     ; 8              ;
-;     -- LPM_WIDTHP                     ; 16             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "symbol_syncroniser:sync|correlator:prmbl"                                            ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; debug ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -412,7 +317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -420,53 +325,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 25 15:26:14 2020
+    Info: Processing started: Thu Feb 27 02:55:08 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ask_rcv -c ask_rcv
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 4 design units, including 4 entities, in source file ask_rcv.v
+Info (12021): Found 5 design units, including 5 entities, in source file ask_rcv.v
     Info (12023): Found entity 1: ask_rcv
     Info (12023): Found entity 2: serial_rcv
     Info (12023): Found entity 3: correlator
     Info (12023): Found entity 4: syncgen
+    Info (12023): Found entity 5: symbol_syncroniser
+Warning (10236): Verilog HDL Implicit Net warning at ask_rcv.v(106): created implicit net for "symbclk"
 Info (12127): Elaborating entity "ask_rcv" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ask_rcv.v(38): truncated value with size 32 to match size of target (16)
-Info (12128): Elaborating entity "correlator" for hierarchy "correlator:prmbl"
-Warning (10235): Verilog HDL Always Construct warning at ask_rcv.v(89): variable "corres" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10030): Net "in[30..0]" at ask_rcv.v(69) has no driver or initial value, using a default initial value '0'
-Info (12128): Elaborating entity "correlator" for hierarchy "correlator:syncwrd"
-Warning (10235): Verilog HDL Always Construct warning at ask_rcv.v(89): variable "corres" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10030): Net "in[6..0]" at ask_rcv.v(69) has no driver or initial value, using a default initial value '0'
-Info (12128): Elaborating entity "syncgen" for hierarchy "syncgen:symbgen"
-Warning (10230): Verilog HDL assignment warning at ask_rcv.v(109): truncated value with size 32 to match size of target (2)
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1"
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "8"
-    Info (12134): Parameter "LPM_WIDTHB" = "8"
-    Info (12134): Parameter "LPM_WIDTHP" = "16"
-    Info (12134): Parameter "LPM_WIDTHR" = "16"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_o5t.tdf
-    Info (12023): Found entity 1: mult_o5t
+Info (12128): Elaborating entity "symbol_syncroniser" for hierarchy "symbol_syncroniser:sync"
+Info (12128): Elaborating entity "correlator" for hierarchy "symbol_syncroniser:sync|correlator:prmbl"
+Warning (10030): Net "in[31..1]" at ask_rcv.v(34) has no driver or initial value, using a default initial value '0'
+Warning (10034): Output port "debug" at ask_rcv.v(30) has no driver
+Info (12128): Elaborating entity "syncgen" for hierarchy "symbol_syncroniser:sync|syncgen:symbgen"
+Warning (10230): Verilog HDL assignment warning at ask_rcv.v(74): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "correlator" for hierarchy "symbol_syncroniser:sync|correlator:syncwrd"
+Warning (10030): Net "in[7..1]" at ask_rcv.v(34) has no driver or initial value, using a default initial value '0'
+Warning (10034): Output port "debug" at ask_rcv.v(30) has no driver
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 134 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Tue Feb 25 15:26:15 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 118 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 342 megabytes
+    Info: Processing ended: Thu Feb 27 02:55:11 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

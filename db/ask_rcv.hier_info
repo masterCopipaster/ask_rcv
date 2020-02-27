@@ -1,60 +1,19 @@
 |ask_rcv
+clk => clk~0.IN1
+serialin => serialin~0.IN1
+reset => reset~0.IN1
+syncronised <= symbol_syncroniser:sync.port3
+
+
+|ask_rcv|symbol_syncroniser:sync
 clk => clk~0.IN2
-idata[0] => Mult0.IN14
-idata[0] => Mult0.IN15
-idata[1] => Mult0.IN12
-idata[1] => Mult0.IN13
-idata[2] => Mult0.IN10
-idata[2] => Mult0.IN11
-idata[3] => Mult0.IN8
-idata[3] => Mult0.IN9
-idata[4] => Mult0.IN6
-idata[4] => Mult0.IN7
-idata[5] => Mult0.IN4
-idata[5] => Mult0.IN5
-idata[6] => Mult0.IN2
-idata[6] => Mult0.IN3
-idata[7] => Mult0.IN0
-idata[7] => Mult0.IN1
-qdata[0] => Mult1.IN14
-qdata[0] => Mult1.IN15
-qdata[1] => Mult1.IN12
-qdata[1] => Mult1.IN13
-qdata[2] => Mult1.IN10
-qdata[2] => Mult1.IN11
-qdata[3] => Mult1.IN8
-qdata[3] => Mult1.IN9
-qdata[4] => Mult1.IN6
-qdata[4] => Mult1.IN7
-qdata[5] => Mult1.IN4
-qdata[5] => Mult1.IN5
-qdata[6] => Mult1.IN2
-qdata[6] => Mult1.IN3
-qdata[7] => Mult1.IN0
-qdata[7] => Mult1.IN1
 serialin => serialin~0.IN2
-odata[0] <= odatareg[0].DB_MAX_OUTPUT_PORT_TYPE
-odata[1] <= odatareg[1].DB_MAX_OUTPUT_PORT_TYPE
-odata[2] <= odatareg[2].DB_MAX_OUTPUT_PORT_TYPE
-odata[3] <= odatareg[3].DB_MAX_OUTPUT_PORT_TYPE
-odata[4] <= odatareg[4].DB_MAX_OUTPUT_PORT_TYPE
-odata[5] <= odatareg[5].DB_MAX_OUTPUT_PORT_TYPE
-odata[6] <= odatareg[6].DB_MAX_OUTPUT_PORT_TYPE
-odata[7] <= odatareg[7].DB_MAX_OUTPUT_PORT_TYPE
-odata[8] <= odatareg[8].DB_MAX_OUTPUT_PORT_TYPE
-odata[9] <= odatareg[9].DB_MAX_OUTPUT_PORT_TYPE
-odata[10] <= odatareg[10].DB_MAX_OUTPUT_PORT_TYPE
-odata[11] <= odatareg[11].DB_MAX_OUTPUT_PORT_TYPE
-odata[12] <= odatareg[12].DB_MAX_OUTPUT_PORT_TYPE
-odata[13] <= odatareg[13].DB_MAX_OUTPUT_PORT_TYPE
-odata[14] <= odatareg[14].DB_MAX_OUTPUT_PORT_TYPE
-odata[15] <= odatareg[15].DB_MAX_OUTPUT_PORT_TYPE
-preamble_lock <= preamble_lock~reg0.DB_MAX_OUTPUT_PORT_TYPE
-syncwrd_lock <= syncwrd_lock~reg0.DB_MAX_OUTPUT_PORT_TYPE
-enabled_symbclk <= enabled_symbclk~0.DB_MAX_OUTPUT_PORT_TYPE
+reset => preamble_lock~0.ACLR
+reset => syncwrd_lock~0.ACLR
+syncclk <= syncclk~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ask_rcv|correlator:prmbl
+|ask_rcv|symbol_syncroniser:sync|correlator:prmbl
 sampleclk => decision~reg0.CLK
 sampleclk => shreg[0].CLK
 sampleclk => shreg[1].CLK
@@ -88,11 +47,53 @@ sampleclk => shreg[28].CLK
 sampleclk => shreg[29].CLK
 sampleclk => shreg[30].CLK
 sampleclk => shreg[31].CLK
-serdata => shreg[31].DATAIN
+serdata => shreg[0].DATAIN
 decision <= decision~reg0.DB_MAX_OUTPUT_PORT_TYPE
+debug[0] <= <GND>
+debug[1] <= <GND>
+debug[2] <= <GND>
+debug[3] <= <GND>
+debug[4] <= <GND>
+debug[5] <= <GND>
+debug[6] <= <GND>
+debug[7] <= <GND>
+debug[8] <= <GND>
+debug[9] <= <GND>
+debug[10] <= <GND>
+debug[11] <= <GND>
+debug[12] <= <GND>
+debug[13] <= <GND>
+debug[14] <= <GND>
+debug[15] <= <GND>
+debug[16] <= <GND>
+debug[17] <= <GND>
+debug[18] <= <GND>
+debug[19] <= <GND>
+debug[20] <= <GND>
+debug[21] <= <GND>
+debug[22] <= <GND>
+debug[23] <= <GND>
+debug[24] <= <GND>
+debug[25] <= <GND>
+debug[26] <= <GND>
+debug[27] <= <GND>
+debug[28] <= <GND>
+debug[29] <= <GND>
+debug[30] <= <GND>
+debug[31] <= <GND>
 
 
-|ask_rcv|correlator:syncwrd
+|ask_rcv|symbol_syncroniser:sync|syncgen:symbgen
+clk => syncclk~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+sync => syncclk~reg0.ACLR
+sync => counter[0].ACLR
+sync => counter[1].ACLR
+syncclk <= syncclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ask_rcv|symbol_syncroniser:sync|correlator:syncwrd
 sampleclk => decision~reg0.CLK
 sampleclk => shreg[0].CLK
 sampleclk => shreg[1].CLK
@@ -102,17 +103,39 @@ sampleclk => shreg[4].CLK
 sampleclk => shreg[5].CLK
 sampleclk => shreg[6].CLK
 sampleclk => shreg[7].CLK
-serdata => shreg[7].DATAIN
+serdata => shreg[0].DATAIN
 decision <= decision~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ask_rcv|syncgen:symbgen
-clk => syncclk~reg0.CLK
-clk => counter[0].CLK
-clk => counter[1].CLK
-sync => syncclk~reg0.ACLR
-sync => counter[0].ACLR
-sync => counter[1].ACLR
-syncclk <= syncclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+debug[0] <= <GND>
+debug[1] <= <GND>
+debug[2] <= <GND>
+debug[3] <= <GND>
+debug[4] <= <GND>
+debug[5] <= <GND>
+debug[6] <= <GND>
+debug[7] <= <GND>
+debug[8] <= <GND>
+debug[9] <= <GND>
+debug[10] <= <GND>
+debug[11] <= <GND>
+debug[12] <= <GND>
+debug[13] <= <GND>
+debug[14] <= <GND>
+debug[15] <= <GND>
+debug[16] <= <GND>
+debug[17] <= <GND>
+debug[18] <= <GND>
+debug[19] <= <GND>
+debug[20] <= <GND>
+debug[21] <= <GND>
+debug[22] <= <GND>
+debug[23] <= <GND>
+debug[24] <= <GND>
+debug[25] <= <GND>
+debug[26] <= <GND>
+debug[27] <= <GND>
+debug[28] <= <GND>
+debug[29] <= <GND>
+debug[30] <= <GND>
+debug[31] <= <GND>
 
 
