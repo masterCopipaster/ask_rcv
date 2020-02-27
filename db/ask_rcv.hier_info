@@ -1,8 +1,17 @@
 |ask_rcv
 clk => clk~0.IN1
-serialin => serialin~0.IN1
-reset => reset~0.IN1
-syncronised <= symbol_syncroniser:sync.port3
+serialin => serialin~0.IN2
+reset => ~NO_FANOUT~
+syncronised <= syncronised~0.DB_MAX_OUTPUT_PORT_TYPE
+data[0] <= serial_rcv:rcv.port2
+data[1] <= serial_rcv:rcv.port2
+data[2] <= serial_rcv:rcv.port2
+data[3] <= serial_rcv:rcv.port2
+data[4] <= serial_rcv:rcv.port2
+data[5] <= serial_rcv:rcv.port2
+data[6] <= serial_rcv:rcv.port2
+data[7] <= serial_rcv:rcv.port2
+ready <= ready~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ask_rcv|symbol_syncroniser:sync
@@ -137,5 +146,39 @@ debug[28] <= <GND>
 debug[29] <= <GND>
 debug[30] <= <GND>
 debug[31] <= <GND>
+
+
+|ask_rcv|serial_rcv:rcv
+symbclk => dataout[0]~reg0.CLK
+symbclk => dataout[1]~reg0.CLK
+symbclk => dataout[2]~reg0.CLK
+symbclk => dataout[3]~reg0.CLK
+symbclk => dataout[4]~reg0.CLK
+symbclk => dataout[5]~reg0.CLK
+symbclk => dataout[6]~reg0.CLK
+symbclk => dataout[7]~reg0.CLK
+symbclk => ready~reg0.CLK
+symbclk => counter[0].CLK
+symbclk => counter[1].CLK
+symbclk => counter[2].CLK
+symbclk => counter[3].CLK
+symbclk => rcvreg[0].CLK
+symbclk => rcvreg[1].CLK
+symbclk => rcvreg[2].CLK
+symbclk => rcvreg[3].CLK
+symbclk => rcvreg[4].CLK
+symbclk => rcvreg[5].CLK
+symbclk => rcvreg[6].CLK
+symbclk => rcvreg[7].CLK
+serialin => rcvreg[0].DATAIN
+dataout[0] <= dataout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[1] <= dataout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[2] <= dataout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[3] <= dataout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[4] <= dataout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[5] <= dataout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[6] <= dataout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[7] <= dataout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ready <= ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

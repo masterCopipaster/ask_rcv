@@ -3,20 +3,38 @@ module ask_rcv(
 	input wire clk,
 	input wire serialin,
 	input wire reset,
-	output wire syncronised
+	output wire syncronised,
+	output wire[7:0] data,
+	output wire ready
 	);
 	
-	symbol_syncroniser sync(clk, serialin, reset, syncronised);
+	symbol_syncroniser sync(clk, serialin, ready, syncronised);
+	serial_rcv rcv(syncronised, serialin, data, ready);
+	
 	
 endmodule
 
-module serial_rcv(input wire symbclk, input wire ser_data, output rcvsync, output wire[7:0] data);
-	reg[7:0] datareg;
-	reg[2:0] bitcount;
-	reg state;
-	always @(negedge ser_data)
+module serial_rcv(symbclk, serialin, dataout, ready);
+	parameter PACKLEN = 8;
+	
+	input wire symbclk;
+	input wire serialin;
+	output reg[PACKLEN - 1 : 0] dataout;
+	output reg ready;
+	
+	reg[PACKLEN - 1: 0] rcvreg;
+	reg[$clog2(PACKLEN) : 0] counter;
+	
+	always @(posedge symbclk)
 	begin
-		state <= 1;
+		rcvreg <= (rcvreg << 1) | serialin;
+		counter <= counter == PACKLEN - 1 ? 0 : counter + 1;
+		if(counter == PACKLEN - 1)
+		begin
+			ready <= 1;
+			dataout <= rcvreg;
+		end
+		else ready <= 0;
 	end
 endmodule
 

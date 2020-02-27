@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ask_rcv
-Thu Feb 27 02:55:11 2020
+Thu Feb 27 10:29:19 2020
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -19,10 +19,11 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  11. Parameter Settings for User Entity Instance: symbol_syncroniser:sync|correlator:prmbl
  12. Parameter Settings for User Entity Instance: symbol_syncroniser:sync|syncgen:symbgen
  13. Parameter Settings for User Entity Instance: symbol_syncroniser:sync|correlator:syncwrd
- 14. Port Connectivity Checks: "symbol_syncroniser:sync|correlator:syncwrd"
- 15. Port Connectivity Checks: "symbol_syncroniser:sync|correlator:prmbl"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: serial_rcv:rcv
+ 15. Port Connectivity Checks: "symbol_syncroniser:sync|correlator:syncwrd"
+ 16. Port Connectivity Checks: "symbol_syncroniser:sync|correlator:prmbl"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 27 02:55:11 2020           ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 27 10:29:19 2020           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ask_rcv                                         ;
 ; Top-level Entity Name              ; ask_rcv                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 118                                             ;
-;     Total combinational functions  ; 76                                              ;
-;     Dedicated logic registers      ; 46                                              ;
-; Total registers                    ; 46                                              ;
-; Total pins                         ; 4                                               ;
+; Total logic elements               ; 138                                             ;
+;     Total combinational functions  ; 80                                              ;
+;     Dedicated logic registers      ; 66                                              ;
+; Total registers                    ; 66                                              ;
+; Total pins                         ; 13                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -180,28 +181,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 118   ;
+; Estimated Total logic elements              ; 138   ;
 ;                                             ;       ;
-; Total combinational functions               ; 76    ;
+; Total combinational functions               ; 80    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 15    ;
-;     -- 3 input functions                    ; 30    ;
-;     -- <=2 input functions                  ; 31    ;
+;     -- 3 input functions                    ; 32    ;
+;     -- <=2 input functions                  ; 33    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 43    ;
+;     -- normal mode                          ; 47    ;
 ;     -- arithmetic mode                      ; 33    ;
 ;                                             ;       ;
-; Total registers                             ; 46    ;
-;     -- Dedicated logic registers            ; 46    ;
+; Total registers                             ; 66    ;
+;     -- Dedicated logic registers            ; 66    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 4     ;
+; I/O pins                                    ; 13    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 35    ;
-; Total fan-out                               ; 292   ;
-; Average fan-out                             ; 2.32  ;
+; Total fan-out                               ; 358   ;
+; Average fan-out                             ; 2.25  ;
 +---------------------------------------------+-------+
 
 
@@ -210,7 +211,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
-; |ask_rcv                     ; 76 (0)            ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |ask_rcv                                            ; work         ;
+; |ask_rcv                     ; 80 (0)            ; 66 (0)       ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |ask_rcv                                            ; work         ;
+;    |serial_rcv:rcv|          ; 4 (4)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|serial_rcv:rcv                             ; work         ;
 ;    |symbol_syncroniser:sync| ; 76 (2)            ; 46 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync                    ; work         ;
 ;       |correlator:prmbl|     ; 69 (69)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl   ; work         ;
 ;       |correlator:syncwrd|   ; 3 (3)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd ; work         ;
@@ -225,7 +227,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                      ; Reason for Removal                     ;
 +----------------------------------------------------+----------------------------------------+
 ; symbol_syncroniser:sync|syncgen:symbgen|counter[1] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1              ;                                        ;
+; serial_rcv:rcv|counter[3]                          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2              ;                                        ;
 +----------------------------------------------------+----------------------------------------+
 
 
@@ -234,12 +237,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 46    ;
+; Total registers                              ; 66    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -294,6 +297,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: serial_rcv:rcv ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; PACKLEN        ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "symbol_syncroniser:sync|correlator:syncwrd"                                          ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -327,7 +340,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 27 02:55:08 2020
+    Info: Processing started: Thu Feb 27 10:29:15 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ask_rcv -c ask_rcv
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 5 design units, including 5 entities, in source file ask_rcv.v
@@ -336,27 +349,31 @@ Info (12021): Found 5 design units, including 5 entities, in source file ask_rcv
     Info (12023): Found entity 3: correlator
     Info (12023): Found entity 4: syncgen
     Info (12023): Found entity 5: symbol_syncroniser
-Warning (10236): Verilog HDL Implicit Net warning at ask_rcv.v(106): created implicit net for "symbclk"
+Warning (10236): Verilog HDL Implicit Net warning at ask_rcv.v(124): created implicit net for "symbclk"
 Info (12127): Elaborating entity "ask_rcv" for the top level hierarchy
 Info (12128): Elaborating entity "symbol_syncroniser" for hierarchy "symbol_syncroniser:sync"
 Info (12128): Elaborating entity "correlator" for hierarchy "symbol_syncroniser:sync|correlator:prmbl"
-Warning (10030): Net "in[31..1]" at ask_rcv.v(34) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "debug" at ask_rcv.v(30) has no driver
+Warning (10030): Net "in[31..1]" at ask_rcv.v(52) has no driver or initial value, using a default initial value '0'
+Warning (10034): Output port "debug" at ask_rcv.v(48) has no driver
 Info (12128): Elaborating entity "syncgen" for hierarchy "symbol_syncroniser:sync|syncgen:symbgen"
-Warning (10230): Verilog HDL assignment warning at ask_rcv.v(74): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at ask_rcv.v(92): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "correlator" for hierarchy "symbol_syncroniser:sync|correlator:syncwrd"
-Warning (10030): Net "in[7..1]" at ask_rcv.v(34) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "debug" at ask_rcv.v(30) has no driver
+Warning (10030): Net "in[7..1]" at ask_rcv.v(52) has no driver or initial value, using a default initial value '0'
+Warning (10034): Output port "debug" at ask_rcv.v(48) has no driver
+Info (12128): Elaborating entity "serial_rcv" for hierarchy "serial_rcv:rcv"
+Warning (10230): Verilog HDL assignment warning at ask_rcv.v(31): truncated value with size 32 to match size of target (4)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset"
+Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 118 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 139 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 342 megabytes
-    Info: Processing ended: Thu Feb 27 02:55:11 2020
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Thu Feb 27 10:29:19 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

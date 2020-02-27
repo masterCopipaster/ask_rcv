@@ -3,28 +3,44 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -6.144
-TNS   : -9.209
+Slack : -6.211
+TNS   : -11.518
 
 Type  : Slow Model Setup 'symbol_syncroniser:sync|syncgen:symbgen|syncclk'
-Slack : -0.536
-TNS   : -0.613
+Slack : -0.847
+TNS   : -8.436
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.221
-TNS   : -2.221
+Slack : -2.229
+TNS   : -2.229
 
 Type  : Slow Model Hold 'symbol_syncroniser:sync|syncgen:symbgen|syncclk'
-Slack : 0.523
+Slack : 0.391
 TNS   : 0.000
 
+Type  : Slow Model Recovery 'symbol_syncroniser:sync|correlator:syncwrd|decision'
+Slack : -3.425
+TNS   : -3.425
+
+Type  : Slow Model Recovery 'symbol_syncroniser:sync|correlator:prmbl|decision'
+Slack : -3.103
+TNS   : -3.103
+
 Type  : Slow Model Recovery 'clk'
-Slack : 1.852
+Slack : 1.664
 TNS   : 0.000
 
 Type  : Slow Model Removal 'clk'
-Slack : -1.582
-TNS   : -3.164
+Slack : -1.394
+TNS   : -2.788
+
+Type  : Slow Model Removal 'symbol_syncroniser:sync|correlator:prmbl|decision'
+Slack : 3.873
+TNS   : 0.000
+
+Type  : Slow Model Removal 'symbol_syncroniser:sync|correlator:syncwrd|decision'
+Slack : 4.195
+TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.380
@@ -32,7 +48,7 @@ TNS   : -36.380
 
 Type  : Slow Model Minimum Pulse Width 'symbol_syncroniser:sync|syncgen:symbgen|syncclk'
 Slack : -0.500
-TNS   : -9.000
+TNS   : -29.000
 
 Type  : Slow Model Minimum Pulse Width 'symbol_syncroniser:sync|correlator:prmbl|decision'
 Slack : -0.500
@@ -43,28 +59,44 @@ Slack : -0.500
 TNS   : -1.000
 
 Type  : Fast Model Setup 'clk'
-Slack : -1.990
-TNS   : -1.990
+Slack : -1.985
+TNS   : -1.985
 
 Type  : Fast Model Setup 'symbol_syncroniser:sync|syncgen:symbgen|syncclk'
-Slack : 0.271
+Slack : 0.065
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.360
-TNS   : -1.360
+Slack : -1.367
+TNS   : -1.367
 
 Type  : Fast Model Hold 'symbol_syncroniser:sync|syncgen:symbgen|syncclk'
-Slack : 0.240
+Slack : 0.215
 TNS   : 0.000
 
+Type  : Fast Model Recovery 'symbol_syncroniser:sync|correlator:syncwrd|decision'
+Slack : -1.374
+TNS   : -1.374
+
+Type  : Fast Model Recovery 'symbol_syncroniser:sync|correlator:prmbl|decision'
+Slack : -1.235
+TNS   : -1.235
+
 Type  : Fast Model Recovery 'clk'
-Slack : 1.375
+Slack : 1.289
 TNS   : 0.000
 
 Type  : Fast Model Removal 'clk'
-Slack : -0.995
-TNS   : -1.990
+Slack : -0.909
+TNS   : -1.818
+
+Type  : Fast Model Removal 'symbol_syncroniser:sync|correlator:prmbl|decision'
+Slack : 2.115
+TNS   : 0.000
+
+Type  : Fast Model Removal 'symbol_syncroniser:sync|correlator:syncwrd|decision'
+Slack : 2.254
+TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
@@ -72,7 +104,7 @@ TNS   : -36.380
 
 Type  : Fast Model Minimum Pulse Width 'symbol_syncroniser:sync|syncgen:symbgen|syncclk'
 Slack : -0.500
-TNS   : -9.000
+TNS   : -29.000
 
 Type  : Fast Model Minimum Pulse Width 'symbol_syncroniser:sync|correlator:prmbl|decision'
 Slack : -0.500
