@@ -23,18 +23,22 @@ module serial_rcv(symbclk, serialin, dataout, ready);
 	output reg ready;
 	
 	reg[PACKLEN - 1: 0] rcvreg;
-	reg[$clog2(PACKLEN) : 0] counter;
+	reg[$clog2(PACKLEN + 1) : 0] counter;
 	
 	always @(posedge symbclk)
 	begin
-		rcvreg <= (rcvreg << 1) | serialin;
-		counter <= counter == PACKLEN - 1 ? 0 : counter + 1;
-		if(counter == PACKLEN - 1)
+		if(counter == PACKLEN)
 		begin
 			ready <= 1;
 			dataout <= rcvreg;
+			counter <= 0;
 		end
-		else ready <= 0;
+		else 
+		begin
+			ready <= 0;
+			rcvreg <= (rcvreg << 1) | serialin;
+			counter <= counter + 1;
+		end
 	end
 endmodule
 
@@ -75,7 +79,7 @@ module correlator(sampleclk, serdata, decision, debug);
 endmodule
 
 module syncgen(input wire clk, input wire sync, output reg syncclk);
-	parameter PRESCALER = 2;
+	parameter PRESCALER = 4;
 	reg[$clog2(PRESCALER) : 0] counter;
 	
 	initial counter = 0;
@@ -90,7 +94,7 @@ module syncgen(input wire clk, input wire sync, output reg syncclk);
 		else
 		begin
 			counter <= counter == PRESCALER-1 ? 0 : counter + 1;
-			if(counter == PRESCALER-1) syncclk <= !syncclk;
+			syncclk <= counter ? 0 : 1;
 		end
 		
 	end
@@ -104,7 +108,7 @@ module symbol_syncroniser(clk, serialin, reset, syncclk);
 	parameter SYNCWORD_WIDTH = 8;
 	parameter SYNCWORD = 8'b11100101;
 	parameter SYNCWORD_BORDER = 7;
-	parameter SYMBCLK_PRESCALER = 2;
+	parameter SYMBCLK_PRESCALER = 4;
 	
 	input wire clk;
 	input wire serialin;
@@ -134,7 +138,47 @@ module symbol_syncroniser(clk, serialin, reset, syncclk);
 		syncwrd_lock <= reset ? 1'b0 : 1'b1;
 endmodule
 
+module transmitter(clk, data, send, dataout, sent);
+	parameter PREAMBLE_WIDTH = 8;
+	parameter PREAMBLE = 8'h10101010;
+	parameter SYNCWORD_WIDTH = 8;
+	parameter SYNCWORD = 8'b11100101;
+	parameter SYMBCLK_PRESCALER = 4;
+	parameter DATA_WIDTH = 8;
+	
+	input wire clk;
+	input wire[DATA_WIDTH - 1 : 0] data;
+	input wire send;
+	output reg sent;
+	output wire dataout;
+	
+	reg[PREAMBLE_WIDTH + SYNCWORD_WIDTH + DATA_WIDTH - 1 : 0] outsr;
+	wire[PREAMBLE_WIDTH + SYNCWORD_WIDTH + DATA_WIDTH - 1 : 0] outword;
+	
+	assign outword[PREAMBLE_WIDTH + SYNCWORD_WIDTH + DATA_WIDTH - 1 : SYNCWORD_WIDTH + DATA_WIDTH] = PREAMBLE;
+	assign outword[SYNCWORD_WIDTH + DATA_WIDTH - 1 : DATA_WIDTH] = SYNCWORD;
+	assign outword[DATA_WIDTH - 1 : 0] = data;
+	
+	assign dataout = outsr[PREAMBLE_WIDTH + SYNCWORD_WIDTH + DATA_WIDTH - 1];
+	
+	wire symbclk;
+	reg[$clog2(PREAMBLE_WIDTH + SYNCWORD_WIDTH + DATA_WIDTH) : 0] sendcnt;
 
+	syncgen #(SYMBCLK_PRESCALER) symbgen(clk, send, symbclk);
+	
+	always @(posedge symbclk or posedge send)
+	begin
+		if(send)
+		begin
+		 outsr <= outword;
+		end
+		else
+		begin
+		end
+	end
+	
+
+	
 
 
 

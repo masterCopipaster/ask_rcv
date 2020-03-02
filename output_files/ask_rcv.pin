@@ -59,7 +59,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 CHIP  "ask_rcv"  ASSIGNED TO AN: EP2C5T144C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -177,25 +177,25 @@ GNDA_PLL2                    : 110       : gnd    :                   :         
 GND                          : 111       : gnd    :                   :         :           :                
 GND*                         : 112       :        :                   :         : 2         :                
 GND*                         : 113       :        :                   :         : 2         :                
-data[7]                      : 114       : output : 3.3-V LVTTL       :         : 2         : N              
-data[3]                      : 115       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 114       :        :                   :         : 2         :                
+GND*                         : 115       :        :                   :         : 2         :                
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-data[4]                      : 118       : output : 3.3-V LVTTL       :         : 2         : N              
-data[6]                      : 119       : output : 3.3-V LVTTL       :         : 2         : N              
-data[1]                      : 120       : output : 3.3-V LVTTL       :         : 2         : N              
-data[5]                      : 121       : output : 3.3-V LVTTL       :         : 2         : N              
+data[6]                      : 118       : output : 3.3-V LVTTL       :         : 2         : N              
+data[1]                      : 119       : output : 3.3-V LVTTL       :         : 2         : N              
+data[4]                      : 120       : output : 3.3-V LVTTL       :         : 2         : N              
+data[3]                      : 121       : output : 3.3-V LVTTL       :         : 2         : N              
 ready                        : 122       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
-data[2]                      : 125       : output : 3.3-V LVTTL       :         : 2         : N              
-data[0]                      : 126       : output : 3.3-V LVTTL       :         : 2         : N              
+data[0]                      : 125       : output : 3.3-V LVTTL       :         : 2         : N              
+data[5]                      : 126       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-GND*                         : 129       :        :                   :         : 2         :                
+data[7]                      : 129       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-GND*                         : 132       :        :                   :         : 2         :                
+data[2]                      : 132       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 133       :        :                   :         : 2         :                
 GND*                         : 134       :        :                   :         : 2         :                
 GND*                         : 135       :        :                   :         : 2         :                
