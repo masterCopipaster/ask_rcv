@@ -28,8 +28,8 @@ module serial_rcv(symbclk, serialin, dataout, ready);
 	always @(posedge symbclk)
 	begin
 		rcvreg <= (rcvreg << 1) | serialin;
-		counter <= counter == PACKLEN - 1 ? 0 : counter + 1;
-		if(counter == PACKLEN - 1)
+		counter <= counter == PACKLEN ? 0 : counter + 1;
+		if(counter == PACKLEN)
 		begin
 			ready <= 1;
 			dataout <= rcvreg;
@@ -75,7 +75,7 @@ module correlator(sampleclk, serdata, decision, debug);
 endmodule
 
 module syncgen(input wire clk, input wire sync, output reg syncclk);
-	parameter PRESCALER = 2;
+	parameter PRESCALER = 4;
 	reg[$clog2(PRESCALER) : 0] counter;
 	
 	initial counter = 0;
@@ -84,13 +84,13 @@ module syncgen(input wire clk, input wire sync, output reg syncclk);
 	begin
 		if(sync)
 		begin
-			counter <= 0;
+			counter <= 1;
 			syncclk <= 0;
 		end
 		else
 		begin
 			counter <= counter == PRESCALER-1 ? 0 : counter + 1;
-			if(counter == PRESCALER-1) syncclk <= !syncclk;
+			syncclk <= counter == (PRESCALER / 2 - 1);
 		end
 		
 	end
@@ -104,7 +104,7 @@ module symbol_syncroniser(clk, serialin, reset, syncclk);
 	parameter SYNCWORD_WIDTH = 8;
 	parameter SYNCWORD = 8'b11100101;
 	parameter SYNCWORD_BORDER = 7;
-	parameter SYMBCLK_PRESCALER = 2;
+	parameter SYMBCLK_PRESCALER = 4;
 	
 	input wire clk;
 	input wire serialin;
@@ -118,6 +118,7 @@ module symbol_syncroniser(clk, serialin, reset, syncclk);
 	wire syncwrd_sync;
 	
 	wire[31:0] abstract0, abstract1;
+	wire abstract2 = symbclk;
 	
 	correlator #(PREAMBLE_WIDTH, PREAMBLE, PREAMBLE_BORDER) prmbl(clk, serialin, preamble_sync, abstract0);
 	

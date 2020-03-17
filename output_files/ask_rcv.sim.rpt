@@ -1,6 +1,6 @@
 Simulator report for ask_rcv
-Thu Feb 27 10:35:04 2020
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Mar 17 15:59:31 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -45,49 +45,48 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 10.0 us      ;
-; Simulation Netlist Size     ; 187 nodes    ;
-; Simulation Coverage         ;      86.38 % ;
-; Total Number of Transitions ; 21251        ;
+; Simulation Netlist Size     ; 451 nodes    ;
+; Simulation Coverage         ;      75.78 % ;
+; Total Number of Transitions ; 45919        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
-; Device                      ; EP2C5T144C6  ;
 +-----------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                        ;
-+--------------------------------------------------------------------------------------------+------------------------------+---------------+
-; Option                                                                                     ; Setting                      ; Default Value ;
-+--------------------------------------------------------------------------------------------+------------------------------+---------------+
-; Simulation mode                                                                            ; Timing                       ; Timing        ;
-; Start time                                                                                 ; 0 ns                         ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                          ;               ;
-; Vector input source                                                                        ; /home/leha/ask_rcv/test1.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                           ; On            ;
-; Check outputs                                                                              ; Off                          ; Off           ;
-; Report simulation coverage                                                                 ; On                           ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                           ; On            ;
-; Display missing 1-value coverage report                                                    ; On                           ; On            ;
-; Display missing 0-value coverage report                                                    ; On                           ; On            ;
-; Detect setup and hold time violations                                                      ; Off                          ; Off           ;
-; Detect glitches                                                                            ; Off                          ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                          ; Off           ;
-; Generate Signal Activity File                                                              ; Off                          ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                          ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                          ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                           ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                   ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                          ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                          ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                         ; Auto          ;
-+--------------------------------------------------------------------------------------------+------------------------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                           ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                         ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                      ; Timing        ;
+; Start time                                                                                 ; 0 ns                                            ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                             ;               ;
+; Vector input source                                                                        ; C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                              ; On            ;
+; Check outputs                                                                              ; Off                                             ; Off           ;
+; Report simulation coverage                                                                 ; On                                              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                              ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                              ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                              ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                             ; Off           ;
+; Detect glitches                                                                            ; Off                                             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                             ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                            ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
 
 
 +----------------------+
 ; Simulation Waveforms ;
 +----------------------+
 Waveform report data cannot be output to ASCII.
-Please use Quartus II 32-bit to view the waveform report data.
+Please use Quartus II 64-Bit to view the waveform report data.
 
 
 +--------------------------------------------------------------------+
@@ -95,272 +94,595 @@ Please use Quartus II 32-bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      86.38 % ;
-; Total nodes checked                                 ; 187          ;
-; Total output ports checked                          ; 213          ;
-; Total output ports with complete 1/0-value coverage ; 184          ;
-; Total output ports with no 1/0-value coverage       ; 18           ;
-; Total output ports with no 1-value coverage         ; 18           ;
-; Total output ports with no 0-value coverage         ; 29           ;
+; Total coverage as a percentage                      ;      75.78 % ;
+; Total nodes checked                                 ; 451          ;
+; Total output ports checked                          ; 450          ;
+; Total output ports with complete 1/0-value coverage ; 341          ;
+; Total output ports with no 1/0-value coverage       ; 104          ;
+; Total output ports with no 1-value coverage         ; 104          ;
+; Total output ports with no 0-value coverage         ; 109          ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                                  ;
-+---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
-; Node Name                                                           ; Output Port Name                                                    ; Output Port Type ;
-+---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~1           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~3           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~4           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~5           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~6           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~1           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~3           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~4           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~5           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~6           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~1           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~3           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~4           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~5           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~6           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~7           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~8           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~8           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~0            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~1            ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~2            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~2            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~2            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~3            ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~4            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~4            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~0            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~1            ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~2            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~2            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~2            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~3            ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~4            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~4            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~1           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~3           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~4           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~5           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~6           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~1           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~3           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~4           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~5           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~6           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~7           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~8           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~8           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~1           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~3           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~4           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~4           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~5           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~6           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~6           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~7           ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~8           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~8           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~2        ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~2        ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~4        ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~4        ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~6        ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~6        ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~8        ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~8        ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~10       ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~10       ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~12       ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~12       ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~13       ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision~13       ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0                     ; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0                     ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0                    ; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0                    ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk            ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk            ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|syncclk                            ; |ask_rcv|symbol_syncroniser:sync|syncclk                            ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[0]                                   ; |ask_rcv|serial_rcv:rcv|rcvreg[0]                                   ; regout           ;
-; |ask_rcv|serial_rcv:rcv|counter[2]                                  ; |ask_rcv|serial_rcv:rcv|counter[2]                                  ; regout           ;
-; |ask_rcv|serial_rcv:rcv|counter[0]                                  ; |ask_rcv|serial_rcv:rcv|counter[0]                                  ; regout           ;
-; |ask_rcv|serial_rcv:rcv|counter[1]                                  ; |ask_rcv|serial_rcv:rcv|counter[1]                                  ; regout           ;
-; |ask_rcv|serial_rcv:rcv|Equal0~0                                    ; |ask_rcv|serial_rcv:rcv|Equal0~0                                    ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[1]                                   ; |ask_rcv|serial_rcv:rcv|rcvreg[1]                                   ; regout           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[2]                                   ; |ask_rcv|serial_rcv:rcv|rcvreg[2]                                   ; regout           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[3]                                   ; |ask_rcv|serial_rcv:rcv|rcvreg[3]                                   ; regout           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[4]                                   ; |ask_rcv|serial_rcv:rcv|rcvreg[4]                                   ; regout           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[5]                                   ; |ask_rcv|serial_rcv:rcv|rcvreg[5]                                   ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|decision        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|decision        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]         ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk~0          ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk~0          ; combout          ;
-; |ask_rcv|serial_rcv:rcv|counter[2]~0                                ; |ask_rcv|serial_rcv:rcv|counter[2]~0                                ; combout          ;
-; |ask_rcv|serial_rcv:rcv|counter[1]~1                                ; |ask_rcv|serial_rcv:rcv|counter[1]~1                                ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[0]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[0]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[3]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[3]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[1]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[1]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[4]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[4]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[6]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[6]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~0          ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~0          ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[2]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[2]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[5]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[5]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[7]        ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[7]        ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~1          ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~1          ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~2          ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~2          ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[23]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[23]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[24]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[24]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[26]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[26]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[25]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[25]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[28]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[28]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[27]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[27]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[15]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[15]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[16]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[16]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[18]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[18]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[17]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[17]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[20]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[20]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[22]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[22]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[21]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[21]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[19]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[19]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~2           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~2           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[7]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[7]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[8]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[8]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[10]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[10]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[9]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[9]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~0            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~1            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~1            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[12]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[12]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[11]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[11]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~2            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~2            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[4]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[4]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[3]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[3]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[1]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[1]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[0]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[0]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[2]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[2]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~0            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~1            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~1            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~0            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~1            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~1            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[6]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[6]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[5]          ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[5]          ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~0            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~0            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~2            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~2            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~1            ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~1            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[14]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[14]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[13]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[13]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[29]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[29]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[30]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[30]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~0           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~0           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~1           ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~1           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[31]         ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[31]         ; regout           ;
-; |ask_rcv|symbol_syncroniser:sync|comb                               ; |ask_rcv|symbol_syncroniser:sync|comb                               ; combout          ;
-; |ask_rcv|serial_rcv:rcv|counter[0]~2                                ; |ask_rcv|serial_rcv:rcv|counter[0]~2                                ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]~0       ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]~0       ; combout          ;
-; |ask_rcv|syncronised                                                ; |ask_rcv|syncronised                                                ; padio            ;
-; |ask_rcv|clk                                                        ; |ask_rcv|clk~corein                                                 ; combout          ;
-; |ask_rcv|serialin                                                   ; |ask_rcv|serialin~corein                                            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|comb~clkctrl                       ; |ask_rcv|symbol_syncroniser:sync|comb~clkctrl                       ; outclk           ;
-; |ask_rcv|symbol_syncroniser:sync|syncclk~clkctrl                    ; |ask_rcv|symbol_syncroniser:sync|syncclk~clkctrl                    ; outclk           ;
-; |ask_rcv|clk~clkctrl                                                ; |ask_rcv|clk~clkctrl                                                ; outclk           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[1]~feeder                            ; |ask_rcv|serial_rcv:rcv|rcvreg[1]~feeder                            ; combout          ;
-; |ask_rcv|serial_rcv:rcv|ready~feeder                                ; |ask_rcv|serial_rcv:rcv|ready~feeder                                ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[1]~feeder                           ; |ask_rcv|serial_rcv:rcv|dataout[1]~feeder                           ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[2]~feeder                            ; |ask_rcv|serial_rcv:rcv|rcvreg[2]~feeder                            ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[2]~feeder                           ; |ask_rcv|serial_rcv:rcv|dataout[2]~feeder                           ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[3]~feeder                            ; |ask_rcv|serial_rcv:rcv|rcvreg[3]~feeder                            ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[5]~feeder                            ; |ask_rcv|serial_rcv:rcv|rcvreg[5]~feeder                            ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[6]~feeder                            ; |ask_rcv|serial_rcv:rcv|rcvreg[6]~feeder                            ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[5]~feeder                           ; |ask_rcv|serial_rcv:rcv|dataout[5]~feeder                           ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[1]~feeder ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[1]~feeder ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[4]~feeder ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[4]~feeder ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[3]~feeder ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[3]~feeder ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[16]~feeder  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[16]~feeder  ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[8]~feeder   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[8]~feeder   ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[7]~feeder   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[7]~feeder   ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[6]~feeder   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[6]~feeder   ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[15]~feeder  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[15]~feeder  ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[0]~feeder   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[0]~feeder   ; combout          ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[0]~feeder                            ; |ask_rcv|serial_rcv:rcv|rcvreg[0]~feeder                            ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[0]~feeder ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[0]~feeder ; combout          ;
-+---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                    ;
++--------------------------------------------------------------+--------------------------------------------------------------+------------------+
+; Node Name                                                    ; Output Port Name                                             ; Output Port Type ;
++--------------------------------------------------------------+--------------------------------------------------------------+------------------+
+; |ask_rcv|clk                                                 ; |ask_rcv|clk                                                 ; out              ;
+; |ask_rcv|serialin                                            ; |ask_rcv|serialin                                            ; out              ;
+; |ask_rcv|syncronised                                         ; |ask_rcv|syncronised                                         ; pin_out          ;
+; |ask_rcv|serial_rcv:rcv|counter~0                            ; |ask_rcv|serial_rcv:rcv|counter~0                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter~1                            ; |ask_rcv|serial_rcv:rcv|counter~1                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter~2                            ; |ask_rcv|serial_rcv:rcv|counter~2                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter~3                            ; |ask_rcv|serial_rcv:rcv|counter~3                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter[0]                           ; |ask_rcv|serial_rcv:rcv|counter[0]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[1]                           ; |ask_rcv|serial_rcv:rcv|counter[1]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[2]                           ; |ask_rcv|serial_rcv:rcv|counter[2]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[3]                           ; |ask_rcv|serial_rcv:rcv|counter[3]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[0]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[0]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[1]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[1]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[2]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[2]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[3]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[3]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[4]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[4]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[5]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[5]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[6]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[6]                            ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|comb~0                      ; |ask_rcv|symbol_syncroniser:sync|comb~0                      ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncclk~0                   ; |ask_rcv|symbol_syncroniser:sync|syncclk~0                   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncclk                     ; |ask_rcv|symbol_syncroniser:sync|syncclk                     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0              ; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0              ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0             ; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0             ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[7] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[7] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[6] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[6] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[5] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[5] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[4] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[4] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[3] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[3] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[2] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[2] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[1] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[1] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[0] ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|shreg[0] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|decision ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|decision ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk     ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk     ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~1   ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~1   ; out              ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~2   ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~2   ; out              ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[1]  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[1]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[29]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[29]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[28]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[28]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[27]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[27]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[26]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[26]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[25]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[25]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[24]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[24]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[23]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[23]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[22]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[22]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[21]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[21]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[20]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[20]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[19]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[19]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[18]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[18]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[17]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[17]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[16]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[16]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[15]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[15]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[14]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[14]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[13]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[13]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[12]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[12]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[11]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[11]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[10]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[10]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[9]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[9]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[8]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[8]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[7]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[7]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[6]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[6]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[5]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[5]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[4]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[4]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[3]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[3]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[2]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[2]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[1]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[1]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[0]   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[0]   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|decision   ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[30]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[30]  ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[31]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[31]  ; regout           ;
+; |ask_rcv|serial_rcv:rcv|Add0~0                               ; |ask_rcv|serial_rcv:rcv|Add0~0                               ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Add0~1                               ; |ask_rcv|serial_rcv:rcv|Add0~1                               ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Add0~2                               ; |ask_rcv|serial_rcv:rcv|Add0~2                               ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Add0~3                               ; |ask_rcv|serial_rcv:rcv|Add0~3                               ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Add0~4                               ; |ask_rcv|serial_rcv:rcv|Add0~4                               ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add0~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add0~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add0~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add0~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~2   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~2   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~2   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~2   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~3   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~3   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~4   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~4   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~2   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~2   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~3   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~3   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~4   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~4   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~2   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~2   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~3   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~3   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~4   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~4   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~2   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~2   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~3   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~3   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~4   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~4   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~0   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~0   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~1   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~1   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~2   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~2   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~3   ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add6~3   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Add0~0      ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Add0~0      ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Add0~1      ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Add0~1      ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Add0~2      ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Add0~2      ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add0~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add0~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add0~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add0~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~5     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~5     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~6     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~6     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~5     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~5     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~6     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~6     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~5     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~5     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~6     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~6     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~0     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~0     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~1     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~1     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~2     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~2     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~3     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~3     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~4     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~4     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~5     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~5     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~6     ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~6     ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~0    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~1    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~1    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~2    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~2    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~4    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~4    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~5    ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Equal0~0                             ; |ask_rcv|serial_rcv:rcv|Equal0~0                             ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal0~0    ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal0~0    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal1~0    ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal1~0    ; out0             ;
++--------------------------------------------------------------+--------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                               ;
-+----------------------------------------------------------+----------------------------------------------------------+------------------+
-; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
-+----------------------------------------------------------+----------------------------------------------------------+------------------+
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~4 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~5 ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~6 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~6 ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~4 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~5 ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6 ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[0]                       ; |ask_rcv|serial_rcv:rcv|dataout[0]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[1]                       ; |ask_rcv|serial_rcv:rcv|dataout[1]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[2]                       ; |ask_rcv|serial_rcv:rcv|dataout[2]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[3]                       ; |ask_rcv|serial_rcv:rcv|dataout[3]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[4]                       ; |ask_rcv|serial_rcv:rcv|dataout[4]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[7]                       ; |ask_rcv|serial_rcv:rcv|dataout[7]                       ; regout           ;
-; |ask_rcv|data[0]                                         ; |ask_rcv|data[0]                                         ; padio            ;
-; |ask_rcv|data[1]                                         ; |ask_rcv|data[1]                                         ; padio            ;
-; |ask_rcv|data[2]                                         ; |ask_rcv|data[2]                                         ; padio            ;
-; |ask_rcv|data[3]                                         ; |ask_rcv|data[3]                                         ; padio            ;
-; |ask_rcv|data[4]                                         ; |ask_rcv|data[4]                                         ; padio            ;
-; |ask_rcv|data[7]                                         ; |ask_rcv|data[7]                                         ; padio            ;
-; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0feeder    ; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0feeder    ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0feeder   ; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0feeder   ; combout          ;
-+----------------------------------------------------------+----------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |ask_rcv|data[0]                                            ; |ask_rcv|data[0]                                            ; pin_out          ;
+; |ask_rcv|data[1]                                            ; |ask_rcv|data[1]                                            ; pin_out          ;
+; |ask_rcv|data[2]                                            ; |ask_rcv|data[2]                                            ; pin_out          ;
+; |ask_rcv|data[3]                                            ; |ask_rcv|data[3]                                            ; pin_out          ;
+; |ask_rcv|data[4]                                            ; |ask_rcv|data[4]                                            ; pin_out          ;
+; |ask_rcv|data[5]                                            ; |ask_rcv|data[5]                                            ; pin_out          ;
+; |ask_rcv|data[7]                                            ; |ask_rcv|data[7]                                            ; pin_out          ;
+; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[3]                          ; |ask_rcv|serial_rcv:rcv|dataout[3]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[4]                          ; |ask_rcv|serial_rcv:rcv|dataout[4]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[5]                          ; |ask_rcv|serial_rcv:rcv|dataout[5]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; out              ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~6  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~6  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~6  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~6  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~6  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~6  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~10  ; out0             ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                               ;
-+----------------------------------------------------------+----------------------------------------------------------+------------------+
-; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
-+----------------------------------------------------------+----------------------------------------------------------+------------------+
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~4 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~5 ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~6 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~6 ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~4 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~5 ; cout             ;
-; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6 ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[0]                       ; |ask_rcv|serial_rcv:rcv|dataout[0]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[1]                       ; |ask_rcv|serial_rcv:rcv|dataout[1]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[2]                       ; |ask_rcv|serial_rcv:rcv|dataout[2]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[3]                       ; |ask_rcv|serial_rcv:rcv|dataout[3]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[4]                       ; |ask_rcv|serial_rcv:rcv|dataout[4]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[5]                       ; |ask_rcv|serial_rcv:rcv|dataout[5]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[6]                       ; |ask_rcv|serial_rcv:rcv|dataout[6]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|dataout[7]                       ; |ask_rcv|serial_rcv:rcv|dataout[7]                       ; regout           ;
-; |ask_rcv|serial_rcv:rcv|ready                            ; |ask_rcv|serial_rcv:rcv|ready                            ; regout           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[6]                        ; |ask_rcv|serial_rcv:rcv|rcvreg[6]                        ; regout           ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[7]                        ; |ask_rcv|serial_rcv:rcv|rcvreg[7]                        ; regout           ;
-; |ask_rcv|data[0]                                         ; |ask_rcv|data[0]                                         ; padio            ;
-; |ask_rcv|data[1]                                         ; |ask_rcv|data[1]                                         ; padio            ;
-; |ask_rcv|data[2]                                         ; |ask_rcv|data[2]                                         ; padio            ;
-; |ask_rcv|data[3]                                         ; |ask_rcv|data[3]                                         ; padio            ;
-; |ask_rcv|data[4]                                         ; |ask_rcv|data[4]                                         ; padio            ;
-; |ask_rcv|data[5]                                         ; |ask_rcv|data[5]                                         ; padio            ;
-; |ask_rcv|data[6]                                         ; |ask_rcv|data[6]                                         ; padio            ;
-; |ask_rcv|data[7]                                         ; |ask_rcv|data[7]                                         ; padio            ;
-; |ask_rcv|ready                                           ; |ask_rcv|ready                                           ; padio            ;
-; |ask_rcv|serial_rcv:rcv|rcvreg[7]~feeder                 ; |ask_rcv|serial_rcv:rcv|rcvreg[7]~feeder                 ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[6]~feeder                ; |ask_rcv|serial_rcv:rcv|dataout[6]~feeder                ; combout          ;
-; |ask_rcv|serial_rcv:rcv|dataout[7]~feeder                ; |ask_rcv|serial_rcv:rcv|dataout[7]~feeder                ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0feeder    ; |ask_rcv|symbol_syncroniser:sync|syncwrd_lock~0feeder    ; combout          ;
-; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0feeder   ; |ask_rcv|symbol_syncroniser:sync|preamble_lock~0feeder   ; combout          ;
-+----------------------------------------------------------+----------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |ask_rcv|data[0]                                            ; |ask_rcv|data[0]                                            ; pin_out          ;
+; |ask_rcv|data[1]                                            ; |ask_rcv|data[1]                                            ; pin_out          ;
+; |ask_rcv|data[2]                                            ; |ask_rcv|data[2]                                            ; pin_out          ;
+; |ask_rcv|data[3]                                            ; |ask_rcv|data[3]                                            ; pin_out          ;
+; |ask_rcv|data[4]                                            ; |ask_rcv|data[4]                                            ; pin_out          ;
+; |ask_rcv|data[5]                                            ; |ask_rcv|data[5]                                            ; pin_out          ;
+; |ask_rcv|data[6]                                            ; |ask_rcv|data[6]                                            ; pin_out          ;
+; |ask_rcv|data[7]                                            ; |ask_rcv|data[7]                                            ; pin_out          ;
+; |ask_rcv|ready                                              ; |ask_rcv|ready                                              ; pin_out          ;
+; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[3]                          ; |ask_rcv|serial_rcv:rcv|dataout[3]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[4]                          ; |ask_rcv|serial_rcv:rcv|dataout[4]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[5]                          ; |ask_rcv|serial_rcv:rcv|dataout[5]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[6]                          ; |ask_rcv|serial_rcv:rcv|dataout[6]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; regout           ;
+; |ask_rcv|serial_rcv:rcv|ready                               ; |ask_rcv|serial_rcv:rcv|ready                               ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; out              ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; regout           ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~6  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~6  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~6  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add4~6  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~5  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~6  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add5~6  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~3    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add1~3    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add2~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add3~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add4~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~5    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~6    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add5~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add6~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add7~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add8~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~7    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~7    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~8    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~8    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~9    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~9    ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~10   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add9~10   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add10~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add11~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add12~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~7   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~7   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~8   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~8   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add13~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add14~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add15~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add16~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add17~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add18~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add19~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add20~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add21~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add22~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add23~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add24~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add25~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add26~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add27~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add28~10  ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~9   ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~9   ; out0             ;
+; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~10  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add29~10  ; out0             ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -374,11 +696,11 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; Simulator Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Simulator
+Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 27 10:35:03 2020
+    Info: Processing started: Tue Mar 17 15:59:31 2020
 Info: Command: quartus_sim --simulation_results_format=VWF ask_rcv -c ask_rcv
-Info (324025): Using vector source file "/home/leha/ask_rcv/test1.vwf"
+Info (324025): Using vector source file "C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf"
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "idata[7]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "idata[6]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "idata[5]" in design.
@@ -411,130 +733,17 @@ Warning (328013): Ignored node in vector source file. Can't find corresponding n
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "odata[10]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "odata[9]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "odata[8]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[5]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[4]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[3]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[2]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[1]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|acc[0]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[31]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[30]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[29]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[28]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[27]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[26]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[25]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[24]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[23]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[22]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[21]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[20]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[19]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[18]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[17]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[16]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[15]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[14]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[13]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[12]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[11]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[10]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[9]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[8]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[7]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[6]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[5]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[4]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[3]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[2]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[1]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|corres[0]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[31]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[30]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[29]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[28]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[27]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[26]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[25]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[24]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[23]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[22]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[21]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[20]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[19]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[18]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[17]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[16]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[15]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[14]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[13]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[12]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[11]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[10]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[9]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[8]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[7]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[6]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[5]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[4]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[3]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[2]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[1]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|shreg[0]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[7]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[6]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[5]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[4]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[3]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[2]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[1]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|shreg[0]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:syncwrd|decision~reg0" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|decision~reg0" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "correlator:prmbl|decision" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[31]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[30]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[29]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[28]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[27]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[26]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[25]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[24]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[23]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[22]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[21]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[20]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[19]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[18]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[17]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[16]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[15]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[14]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[13]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[12]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[11]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[10]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[9]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[8]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[7]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[6]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[5]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[4]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[3]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[2]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[1]" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "abstract[0]" in design.
 Warning (328012): Can't find signal in vector source file for input pin "|ask_rcv|reset"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      86.38 %
-Info (328052): Number of transitions in simulation is 21251
+Info (328053): Simulation coverage is      75.78 %
+Info (328052): Number of transitions in simulation is 45919
 Info (324045): Vector file ask_rcv.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 32-bit Simulator was successful. 0 errors, 146 warnings
-    Info: Peak virtual memory: 282 megabytes
-    Info: Processing ended: Thu Feb 27 10:35:04 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4449 megabytes
+    Info: Processing ended: Tue Mar 17 15:59:31 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 

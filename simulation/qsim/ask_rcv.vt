@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/27/2020 10:30:13"
+// Generated on "03/17/2020 12:56:17"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    ask_rcv
 // 
@@ -93,6 +93,8 @@ begin
 	serialin = #40000 1'b1;
 	serialin = #120000 1'b0;
 	serialin = #80000 1'b1;
+	serialin = #40000 1'b0;
+	serialin = #40000 1'b1;
 	serialin = #40000 1'b0;
 	serialin = #40000 1'b1;
 	serialin = #40000 1'b0;

@@ -1,6 +1,6 @@
 Assembler report for ask_rcv
-Thu Feb 27 10:29:38 2020
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Mar 17 15:35:35 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: ask_rcv.sof
-  6. Assembler Device Options: ask_rcv.pof
+  5. Assembler Device Options: C:/Users/petrenko.a/Documents/ask_rcv/output_files/ask_rcv.sof
+  6. Assembler Device Options: C:/Users/petrenko.a/Documents/ask_rcv/output_files/ask_rcv.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Feb 27 10:29:38 2020 ;
+; Assembler Status      ; Successful - Tue Mar 17 15:35:35 2020 ;
 ; Revision Name         ; ask_rcv                               ;
 ; Top-level Entity Name ; ask_rcv                               ;
 ; Family                ; Cyclone II                            ;
@@ -78,53 +78,53 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------+
-; Assembler Generated Files ;
-+---------------------------+
-; File Name                 ;
-+---------------------------+
-; ask_rcv.sof               ;
-; ask_rcv.pof               ;
-+---------------------------+
++----------------------------------------------------------------+
+; Assembler Generated Files                                      ;
++----------------------------------------------------------------+
+; File Name                                                      ;
++----------------------------------------------------------------+
+; C:/Users/petrenko.a/Documents/ask_rcv/output_files/ask_rcv.sof ;
+; C:/Users/petrenko.a/Documents/ask_rcv/output_files/ask_rcv.pof ;
++----------------------------------------------------------------+
 
 
-+---------------------------------------+
-; Assembler Device Options: ask_rcv.sof ;
-+----------------+----------------------+
-; Option         ; Setting              ;
-+----------------+----------------------+
-; Device         ; EP2C5T144C6          ;
-; JTAG usercode  ; 0x00081B2A           ;
-; Checksum       ; 0x00081B2A           ;
-+----------------+----------------------+
++------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/petrenko.a/Documents/ask_rcv/output_files/ask_rcv.sof ;
++----------------+-------------------------------------------------------------------------+
+; Option         ; Setting                                                                 ;
++----------------+-------------------------------------------------------------------------+
+; Device         ; EP2C5T144C6                                                             ;
+; JTAG usercode  ; 0x000834EF                                                              ;
+; Checksum       ; 0x000834EF                                                              ;
++----------------+-------------------------------------------------------------------------+
 
 
-+---------------------------------------+
-; Assembler Device Options: ask_rcv.pof ;
-+--------------------+------------------+
-; Option             ; Setting          ;
-+--------------------+------------------+
-; Device             ; EPCS4            ;
-; JTAG usercode      ; 0x00000000       ;
-; Checksum           ; 0x0750AA14       ;
-; Compression Ratio  ; 3                ;
-+--------------------+------------------+
++------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/petrenko.a/Documents/ask_rcv/output_files/ask_rcv.pof ;
++--------------------+---------------------------------------------------------------------+
+; Option             ; Setting                                                             ;
++--------------------+---------------------------------------------------------------------+
+; Device             ; EPCS4                                                               ;
+; JTAG usercode      ; 0x00000000                                                          ;
+; Checksum           ; 0x075065A5                                                          ;
+; Compression Ratio  ; 3                                                                   ;
++--------------------+---------------------------------------------------------------------+
 
 
 +--------------------+
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Assembler
+Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 27 10:29:36 2020
+    Info: Processing started: Tue Mar 17 15:35:35 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ask_rcv -c ask_rcv
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 326 megabytes
-    Info: Processing ended: Thu Feb 27 10:29:38 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4545 megabytes
+    Info: Processing ended: Tue Mar 17 15:35:35 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
