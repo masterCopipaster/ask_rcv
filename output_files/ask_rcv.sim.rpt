@@ -1,5 +1,9 @@
 Simulator report for ask_rcv
+<<<<<<< HEAD
 Tue Mar 17 15:59:31 2020
+=======
+Mon Mar 02 12:49:05 2020
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,9 +49,15 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 10.0 us      ;
+<<<<<<< HEAD
 ; Simulation Netlist Size     ; 451 nodes    ;
 ; Simulation Coverage         ;      75.78 % ;
 ; Total Number of Transitions ; 45919        ;
+=======
+; Simulation Netlist Size     ; 455 nodes    ;
+; Simulation Coverage         ;      74.89 % ;
+; Total Number of Transitions ; 45422        ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,6 +104,7 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
+<<<<<<< HEAD
 ; Total coverage as a percentage                      ;      75.78 % ;
 ; Total nodes checked                                 ; 451          ;
 ; Total output ports checked                          ; 450          ;
@@ -101,6 +112,15 @@ Please use Quartus II 64-Bit to view the waveform report data.
 ; Total output ports with no 1/0-value coverage       ; 104          ;
 ; Total output ports with no 1-value coverage         ; 104          ;
 ; Total output ports with no 0-value coverage         ; 109          ;
+=======
+; Total coverage as a percentage                      ;      74.89 % ;
+; Total nodes checked                                 ; 455          ;
+; Total output ports checked                          ; 454          ;
+; Total output ports with complete 1/0-value coverage ; 340          ;
+; Total output ports with no 1/0-value coverage       ; 109          ;
+; Total output ports with no 1-value coverage         ; 109          ;
+; Total output ports with no 0-value coverage         ; 114          ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 +-----------------------------------------------------+--------------+
 
 
@@ -113,6 +133,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ask_rcv|clk                                                 ; |ask_rcv|clk                                                 ; out              ;
 ; |ask_rcv|serialin                                            ; |ask_rcv|serialin                                            ; out              ;
 ; |ask_rcv|syncronised                                         ; |ask_rcv|syncronised                                         ; pin_out          ;
+<<<<<<< HEAD
 ; |ask_rcv|serial_rcv:rcv|counter~0                            ; |ask_rcv|serial_rcv:rcv|counter~0                            ; out              ;
 ; |ask_rcv|serial_rcv:rcv|counter~1                            ; |ask_rcv|serial_rcv:rcv|counter~1                            ; out              ;
 ; |ask_rcv|serial_rcv:rcv|counter~2                            ; |ask_rcv|serial_rcv:rcv|counter~2                            ; out              ;
@@ -122,12 +143,26 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ask_rcv|serial_rcv:rcv|counter[2]                           ; |ask_rcv|serial_rcv:rcv|counter[2]                           ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|counter[3]                           ; |ask_rcv|serial_rcv:rcv|counter[3]                           ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|rcvreg[0]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[0]                            ; regout           ;
+=======
+; |ask_rcv|serial_rcv:rcv|rcvreg[0]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[0]                            ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter~1                            ; |ask_rcv|serial_rcv:rcv|counter~1                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter~2                            ; |ask_rcv|serial_rcv:rcv|counter~2                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter~3                            ; |ask_rcv|serial_rcv:rcv|counter~3                            ; out              ;
+; |ask_rcv|serial_rcv:rcv|counter~4                            ; |ask_rcv|serial_rcv:rcv|counter~4                            ; out              ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|serial_rcv:rcv|rcvreg[1]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[1]                            ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|rcvreg[2]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[2]                            ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|rcvreg[3]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[3]                            ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|rcvreg[4]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[4]                            ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|rcvreg[5]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[5]                            ; regout           ;
+<<<<<<< HEAD
 ; |ask_rcv|serial_rcv:rcv|rcvreg[6]                            ; |ask_rcv|serial_rcv:rcv|rcvreg[6]                            ; regout           ;
+=======
+; |ask_rcv|serial_rcv:rcv|counter[0]                           ; |ask_rcv|serial_rcv:rcv|counter[0]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[1]                           ; |ask_rcv|serial_rcv:rcv|counter[1]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[2]                           ; |ask_rcv|serial_rcv:rcv|counter[2]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[3]                           ; |ask_rcv|serial_rcv:rcv|counter[3]                           ; regout           ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|symbol_syncroniser:sync|comb~0                      ; |ask_rcv|symbol_syncroniser:sync|comb~0                      ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|syncclk~0                   ; |ask_rcv|symbol_syncroniser:sync|syncclk~0                   ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|syncclk                     ; |ask_rcv|symbol_syncroniser:sync|syncclk                     ; out0             ;
@@ -145,6 +180,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk     ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|syncclk     ; regout           ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~1   ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~1   ; out              ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~2   ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~2   ; out              ;
+<<<<<<< HEAD
+=======
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|WideOr0     ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|WideOr0     ; out0             ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[1]  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[1]  ; regout           ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[0]  ; regout           ;
 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[29]  ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|shreg[29]  ; regout           ;
@@ -450,7 +489,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~5    ; |ask_rcv|symbol_syncroniser:sync|correlator:prmbl|Add30~5    ; out0             ;
 ; |ask_rcv|serial_rcv:rcv|Equal0~0                             ; |ask_rcv|serial_rcv:rcv|Equal0~0                             ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal0~0    ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal0~0    ; out0             ;
+<<<<<<< HEAD
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal1~0    ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|Equal1~0    ; out0             ;
+=======
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 +--------------------------------------------------------------+--------------------------------------------------------------+------------------+
 
 
@@ -467,6 +509,12 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ask_rcv|data[4]                                            ; |ask_rcv|data[4]                                            ; pin_out          ;
 ; |ask_rcv|data[5]                                            ; |ask_rcv|data[5]                                            ; pin_out          ;
 ; |ask_rcv|data[7]                                            ; |ask_rcv|data[7]                                            ; pin_out          ;
+<<<<<<< HEAD
+=======
+; |ask_rcv|serial_rcv:rcv|counter~0                           ; |ask_rcv|serial_rcv:rcv|counter~0                           ; out              ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[4]                          ; |ask_rcv|serial_rcv:rcv|counter[4]                          ; regout           ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; regout           ;
@@ -476,6 +524,11 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; regout           ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; out              ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; regout           ;
+<<<<<<< HEAD
+=======
+; |ask_rcv|serial_rcv:rcv|Add0~5                              ; |ask_rcv|serial_rcv:rcv|Add0~5                              ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Add0~6                              ; |ask_rcv|serial_rcv:rcv|Add0~6                              ; out0             ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; out0             ;
@@ -582,6 +635,13 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ask_rcv|data[6]                                            ; |ask_rcv|data[6]                                            ; pin_out          ;
 ; |ask_rcv|data[7]                                            ; |ask_rcv|data[7]                                            ; pin_out          ;
 ; |ask_rcv|ready                                              ; |ask_rcv|ready                                              ; pin_out          ;
+<<<<<<< HEAD
+=======
+; |ask_rcv|serial_rcv:rcv|counter~0                           ; |ask_rcv|serial_rcv:rcv|counter~0                           ; out              ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[6]                           ; |ask_rcv|serial_rcv:rcv|rcvreg[6]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; regout           ;
+; |ask_rcv|serial_rcv:rcv|counter[4]                          ; |ask_rcv|serial_rcv:rcv|counter[4]                          ; regout           ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; |ask_rcv|serial_rcv:rcv|dataout[0]                          ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; |ask_rcv|serial_rcv:rcv|dataout[1]                          ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; |ask_rcv|serial_rcv:rcv|dataout[2]                          ; regout           ;
@@ -591,9 +651,16 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ask_rcv|serial_rcv:rcv|dataout[6]                          ; |ask_rcv|serial_rcv:rcv|dataout[6]                          ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; |ask_rcv|serial_rcv:rcv|dataout[7]                          ; regout           ;
 ; |ask_rcv|serial_rcv:rcv|ready                               ; |ask_rcv|serial_rcv:rcv|ready                               ; regout           ;
+<<<<<<< HEAD
 ; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; |ask_rcv|serial_rcv:rcv|rcvreg[7]                           ; regout           ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; out              ;
 ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; regout           ;
+=======
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter~0  ; out              ;
+; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; |ask_rcv|symbol_syncroniser:sync|syncgen:symbgen|counter[2] ; regout           ;
+; |ask_rcv|serial_rcv:rcv|Add0~5                              ; |ask_rcv|serial_rcv:rcv|Add0~5                              ; out0             ;
+; |ask_rcv|serial_rcv:rcv|Add0~6                              ; |ask_rcv|serial_rcv:rcv|Add0~6                              ; out0             ;
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add1~3  ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add2~5  ; out0             ;
 ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; |ask_rcv|symbol_syncroniser:sync|correlator:syncwrd|Add3~5  ; out0             ;
@@ -698,6 +765,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+<<<<<<< HEAD
     Info: Processing started: Tue Mar 17 15:59:31 2020
 Info: Command: quartus_sim --simulation_results_format=VWF ask_rcv -c ask_rcv
 Info (324025): Using vector source file "C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf"
@@ -717,6 +785,11 @@ Warning (328013): Ignored node in vector source file. Can't find corresponding n
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "qdata[2]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "qdata[1]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "qdata[0]" in design.
+=======
+    Info: Processing started: Mon Mar 02 12:49:05 2020
+Info: Command: quartus_sim --simulation_results_format=VWF ask_rcv -c ask_rcv
+Info (324025): Using vector source file "C:/Users/petrenko.a/Documents/ask_rcv/test1.vwf"
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "odata[7]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "odata[6]" in design.
 Warning (328013): Ignored node in vector source file. Can't find corresponding node name "odata[5]" in design.
@@ -737,12 +810,21 @@ Warning (328012): Can't find signal in vector source file for input pin "|ask_rc
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
+<<<<<<< HEAD
 Info (328053): Simulation coverage is      75.78 %
 Info (328052): Number of transitions in simulation is 45919
 Info (324045): Vector file ask_rcv.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 33 warnings
     Info: Peak virtual memory: 4449 megabytes
     Info: Processing ended: Tue Mar 17 15:59:31 2020
+=======
+Info (328053): Simulation coverage is      74.89 %
+Info (328052): Number of transitions in simulation is 45422
+Info (324045): Vector file ask_rcv.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4449 megabytes
+    Info: Processing ended: Mon Mar 02 12:49:05 2020
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

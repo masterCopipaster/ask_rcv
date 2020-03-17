@@ -1,6 +1,10 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="db31f0d2b0ef3c38646d"/>
+=======
+    <hash md5_digest_80b="26f4dc3d377e9b030ecf"/>
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
   </project>
   <file_info>
     <file device="EP2C5T144C6" path="ask_rcv.sof" usercode="0xFFFFFFFF"/>

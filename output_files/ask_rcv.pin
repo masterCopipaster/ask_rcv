@@ -181,6 +181,7 @@ GND*                         : 114       :        :                   :         
 GND*                         : 115       :        :                   :         : 2         :                
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
+<<<<<<< HEAD
 GND*                         : 118       :        :                   :         : 2         :                
 GND*                         : 119       :        :                   :         : 2         :                
 GND*                         : 120       :        :                   :         : 2         :                
@@ -190,12 +191,23 @@ GND                          : 123       : gnd    :                   :         
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
 GND*                         : 125       :        :                   :         : 2         :                
 GND*                         : 126       :        :                   :         : 2         :                
+=======
+data[6]                      : 118       : output : 3.3-V LVTTL       :         : 2         : N              
+data[1]                      : 119       : output : 3.3-V LVTTL       :         : 2         : N              
+data[4]                      : 120       : output : 3.3-V LVTTL       :         : 2         : N              
+data[3]                      : 121       : output : 3.3-V LVTTL       :         : 2         : N              
+ready                        : 122       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 123       : gnd    :                   :         :           :                
+VCCINT                       : 124       : power  :                   : 1.2V    :           :                
+data[0]                      : 125       : output : 3.3-V LVTTL       :         : 2         : N              
+data[5]                      : 126       : output : 3.3-V LVTTL       :         : 2         : N              
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-GND*                         : 129       :        :                   :         : 2         :                
+data[7]                      : 129       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-GND*                         : 132       :        :                   :         : 2         :                
+data[2]                      : 132       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 133       :        :                   :         : 2         :                
 GND*                         : 134       :        :                   :         : 2         :                
 GND*                         : 135       :        :                   :         : 2         :                

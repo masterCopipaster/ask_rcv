@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Tue Mar 17 15:35:31 2020
+=======
+Analysis & Synthesis Status : Successful - Mon Mar 02 10:59:32 2020
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ask_rcv
 Top-level Entity Name : ask_rcv
 Family : Cyclone II
+<<<<<<< HEAD
 Total logic elements : 140
     Total combinational functions : 82
     Dedicated logic registers : 68
 Total registers : 68
+=======
+Total logic elements : 145
+    Total combinational functions : 87
+    Dedicated logic registers : 69
+Total registers : 69
+>>>>>>> 38a65153459fc010853102e33625ae1b7515ffd2
 Total pins : 13
 Total virtual pins : 0
 Total memory bits : 0
